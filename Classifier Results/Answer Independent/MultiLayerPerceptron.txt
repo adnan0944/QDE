@@ -1,0 +1,114 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.MultilayerPerceptron -L 0.3 -M 0.2 -N 500 -V 0 -S 0 -E 20 -H a
+Relation:     new_data-weka.filters.unsupervised.attribute.Remove-R1-2,5,10-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1
+Instances:    1550
+Attributes:   7
+              score
+              ViewCount
+              CommentCount
+              ques_size
+              favoritecount
+              Question_user_repo
+              Majority voting (class)
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Sigmoid Node 0
+    Inputs    Weights
+    Threshold    -0.8998616315062367
+    Node 3    -1.96567157107143
+    Node 4    5.015324346078305
+    Node 5    -0.2479614309393054
+    Node 6    2.866352556126232
+Sigmoid Node 1
+    Inputs    Weights
+    Threshold    -0.9170323851462021
+    Node 3    1.6666441176308433
+    Node 4    -1.4888444281388233
+    Node 5    -2.813443446059774
+    Node 6    -0.2716269800163353
+Sigmoid Node 2
+    Inputs    Weights
+    Threshold    0.009601237877030985
+    Node 3    -0.7452564112639785
+    Node 4    -8.863549442663043
+    Node 5    2.392267189021045
+    Node 6    -4.3217544185404115
+Sigmoid Node 3
+    Inputs    Weights
+    Threshold    0.8123471809969017
+    Attrib score    -11.13088877693239
+    Attrib ViewCount    -2.101048466347428
+    Attrib CommentCount    6.828981940670679
+    Attrib ques_size    12.056061606334405
+    Attrib favoritecount    -0.06880890219744333
+    Attrib Question_user_repo    1.7677384662045752
+Sigmoid Node 4
+    Inputs    Weights
+    Threshold    -11.950899454979954
+    Attrib score    -2.249165692868988
+    Attrib ViewCount    24.78542331934202
+    Attrib CommentCount    -17.23536160908973
+    Attrib ques_size    -18.05322382905308
+    Attrib favoritecount    1.024062579128341
+    Attrib Question_user_repo    0.8469954200879298
+Sigmoid Node 5
+    Inputs    Weights
+    Threshold    0.5241814679159111
+    Attrib score    5.027521136647122
+    Attrib ViewCount    -13.906590311462715
+    Attrib CommentCount    1.4068753447782252
+    Attrib ques_size    9.010205568656167
+    Attrib favoritecount    -2.338101175580644
+    Attrib Question_user_repo    8.177821910404386
+Sigmoid Node 6
+    Inputs    Weights
+    Threshold    4.707254203082363
+    Attrib score    -29.47592893029438
+    Attrib ViewCount    37.875285341433155
+    Attrib CommentCount    3.2714274044184775
+    Attrib ques_size    -7.946201399643651
+    Attrib favoritecount    1.5301146425885992
+    Attrib Question_user_repo    0.5295627616064338
+Class Basic
+    Input
+    Node 0
+Class Intermediate
+    Input
+    Node 1
+Class Advanced
+    Input
+    Node 2
+
+
+Time taken to build model: 1.52 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         756               48.7742 %
+Incorrectly Classified Instances       794               51.2258 %
+Kappa statistic                          0.2313
+Mean absolute error                      0.3894
+Root mean squared error                  0.4467
+Relative absolute error                 88.1842 %
+Root relative squared error             95.0623 %
+Total Number of Instances             1550     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.567    0.223    0.615      0.567    0.590      0.350    0.734     0.665     Basic
+                 0.270    0.206    0.376      0.270    0.315      0.071    0.570     0.355     Intermediate
+                 0.614    0.334    0.440      0.614    0.513      0.260    0.726     0.483     Advanced
+Weighted Avg.    0.488    0.251    0.487      0.488    0.480      0.235    0.680     0.513     
+
+=== Confusion Matrix ===
+
+   a   b   c   <-- classified as
+ 339 114 145 |   a = Basic
+ 138 132 218 |   b = Intermediate
+  74 105 285 |   c = Advanced
+

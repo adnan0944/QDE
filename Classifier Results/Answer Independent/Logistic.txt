@@ -1,0 +1,72 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4
+Relation:     new_data-weka.filters.unsupervised.attribute.Remove-R1-2,5,10-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1
+Instances:    1550
+Attributes:   7
+              score
+              ViewCount
+              CommentCount
+              ques_size
+              favoritecount
+              Question_user_repo
+              Majority voting (class)
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Logistic Regression with ridge parameter of 1.0E-8
+Coefficients...
+                             Class
+Variable                     Basic  Intermediate
+================================================
+score                      -0.0331        -0.023
+ViewCount                   0.0001        0.0001
+CommentCount                0.0271         0.092
+ques_size                  -0.0007       -0.0002
+favoritecount               0.0069        0.0043
+Question_user_repo              -0            -0
+Intercept                   0.7177        0.0462
+
+
+Odds Ratios...
+                             Class
+Variable                     Basic  Intermediate
+================================================
+score                       0.9674        0.9773
+ViewCount                   1.0001        1.0001
+CommentCount                1.0275        1.0964
+ques_size                   0.9993        0.9998
+favoritecount               1.0069        1.0043
+Question_user_repo               1             1
+
+
+Time taken to build model: 0.08 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         777               50.129  %
+Incorrectly Classified Instances       773               49.871  %
+Kappa statistic                          0.2361
+Mean absolute error                      0.3918
+Root mean squared error                  0.4428
+Relative absolute error                 88.7158 %
+Root relative squared error             94.2351 %
+Total Number of Instances             1550     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.712    0.411    0.521      0.712    0.602      0.294    0.732     0.660     Basic
+                 0.217    0.113    0.469      0.217    0.297      0.137    0.607     0.408     Intermediate
+                 0.528    0.241    0.483      0.528    0.505      0.280    0.726     0.493     Advanced
+Weighted Avg.    0.501    0.266    0.493      0.501    0.477      0.240    0.691     0.531     
+
+=== Confusion Matrix ===
+
+   a   b   c   <-- classified as
+ 426  66 106 |   a = Basic
+ 226 106 156 |   b = Intermediate
+ 165  54 245 |   c = Advanced
+

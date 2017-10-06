@@ -1,0 +1,64 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.bayes.BayesNet -D -Q weka.classifiers.bayes.net.search.local.K2 -- -P 1 -S BAYES -E weka.classifiers.bayes.net.estimate.SimpleEstimator -- -A 0.5
+Relation:     new_data-weka.filters.unsupervised.attribute.Remove-R1-2,5,10-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1
+Instances:    1550
+Attributes:   7
+              score
+              ViewCount
+              CommentCount
+              ques_size
+              favoritecount
+              Question_user_repo
+              Majority voting (class)
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Bayes Network Classifier
+not using ADTree
+#attributes=7 #classindex=6
+Network structure (nodes followed by parents)
+score(6): Majority voting (class) 
+ViewCount(4): Majority voting (class) 
+CommentCount(13): Majority voting (class) 
+ques_size(4): Majority voting (class) 
+favoritecount(9): Majority voting (class) 
+Question_user_repo(2): Majority voting (class) 
+Majority voting (class)(3): 
+LogScore Bayes: -12869.951155986906
+LogScore BDeu: -13165.683039308402
+LogScore MDL: -13142.074232655817
+LogScore ENTROPY: -12782.119732370067
+LogScore AIC: -12880.119732370067
+
+
+Time taken to build model: 0.02 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        1044               67.3548 %
+Incorrectly Classified Instances       506               32.6452 %
+Kappa statistic                          0.501 
+Mean absolute error                      0.2775
+Root mean squared error                  0.3883
+Relative absolute error                 62.8265 %
+Root relative squared error             82.6262 %
+Total Number of Instances             1550     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.900    0.264    0.682      0.900    0.776      0.619    0.882     0.768     Basic
+                 0.299    0.095    0.591      0.299    0.397      0.259    0.668     0.528     Intermediate
+                 0.776    0.142    0.700      0.776    0.736      0.617    0.884     0.724     Advanced
+Weighted Avg.    0.674    0.174    0.659      0.674    0.645      0.505    0.815     0.679     
+
+=== Confusion Matrix ===
+
+   a   b   c   <-- classified as
+ 538  44  16 |   a = Basic
+ 204 146 138 |   b = Intermediate
+  47  57 360 |   c = Advanced
+

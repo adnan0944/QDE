@@ -1,0 +1,390 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.meta.LogitBoost -P 100 -L -1.7976931348623157E308 -H 1.0 -Z 3.0 -O 1 -E 1 -S 1 -I 10 -W weka.classifiers.trees.DecisionStump -batch-size
+Relation:     new_data-weka.filters.unsupervised.attribute.Remove-R1-2,5,10-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1
+Instances:    1550
+Attributes:   7
+              score
+              ViewCount
+              CommentCount
+              ques_size
+              favoritecount
+              Question_user_repo
+              Majority voting (class)
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+LogitBoost: Base classifiers and their weights: 
+
+Iteration 1
+	Class 1 (Majority voting (class)=Basic)
+
+Decision Stump
+
+Classifications
+
+ques_size <= 1062.2397301642948 : 0.7679589509691938
+ques_size > 1062.2397301642948 : -0.4538002980625587
+ques_size is missing : -1.4999999999999998
+
+
+	Class 2 (Majority voting (class)=Intermediate)
+
+Decision Stump
+
+Classifications
+
+CommentCount <= 3.593788344061651 : -0.2525906735751245
+CommentCount > 3.593788344061651 : 0.40384615384614736
+CommentCount is missing : 2.9999999999999996
+
+
+	Class 3 (Majority voting (class)=Advanced)
+
+Decision Stump
+
+Classifications
+
+ViewCount <= 8363.680174557529 : 0.31964656964656435
+ViewCount > 8363.680174557529 : -0.9240614334470987
+ViewCount is missing : -1.4999999999999998
+
+
+Iteration 2
+	Class 1 (Majority voting (class)=Basic)
+
+Decision Stump
+
+Classifications
+
+ViewCount <= 58329.32295639737 : -0.12602381233402582
+ViewCount > 58329.32295639737 : 1.3958248457793259
+ViewCount is missing : -1.0474258731775667
+
+
+	Class 2 (Majority voting (class)=Intermediate)
+
+Decision Stump
+
+Classifications
+
+ViewCount <= 727.5 : 0.8593562658653073
+ViewCount > 727.5 : -0.06683939980974868
+ViewCount is missing : 1.0995741367357281
+
+
+	Class 3 (Majority voting (class)=Advanced)
+
+Decision Stump
+
+Classifications
+
+favoritecount <= 1.000091964625624 : -1.2984339803997764
+favoritecount > 1.000091964625624 : 0.3203972680473799
+favoritecount is missing : -0.8339760737723565
+
+
+Iteration 3
+	Class 1 (Majority voting (class)=Basic)
+
+Decision Stump
+
+Classifications
+
+CommentCount <= 3.7883978968145104E-4 : 0.6200410411906292
+CommentCount > 3.7883978968145104E-4 : -0.1826490272988389
+CommentCount is missing : -1.0117375957673496
+
+
+	Class 2 (Majority voting (class)=Intermediate)
+
+Decision Stump
+
+Classifications
+
+Question_user_repo <= 1951.4559704817816 : -0.20325139871086811
+Question_user_repo > 1951.4559704817816 : 0.19801545501346557
+Question_user_repo is missing : 1.025616792065812
+
+
+	Class 3 (Majority voting (class)=Advanced)
+
+Decision Stump
+
+Classifications
+
+score <= 7.166926189143506 : -0.7784247602926416
+score > 7.166926189143506 : 0.13640568274621784
+score is missing : -0.029795468259400708
+
+
+Iteration 4
+	Class 1 (Majority voting (class)=Basic)
+
+Decision Stump
+
+Classifications
+
+favoritecount <= 2.0095286722831336 : 0.3478124139164645
+favoritecount > 2.0095286722831336 : -0.2264199614793692
+favoritecount is missing : 0.38415539887483496
+
+
+	Class 2 (Majority voting (class)=Intermediate)
+
+Decision Stump
+
+Classifications
+
+Question_user_repo <= 40729.0 : 0.05463910097421455
+Question_user_repo > 40729.0 : -0.8513846235294289
+Question_user_repo is missing : 1.009241768331256
+
+
+	Class 3 (Majority voting (class)=Advanced)
+
+Decision Stump
+
+Classifications
+
+ViewCount <= 9292.5 : 0.22069630980296182
+ViewCount > 9292.5 : -0.5323575475652597
+ViewCount is missing : -1.006339189593416
+
+
+Iteration 5
+	Class 1 (Majority voting (class)=Basic)
+
+Decision Stump
+
+Classifications
+
+ViewCount <= 18700.9179723775 : -0.1230102567048802
+ViewCount > 18700.9179723775 : 0.44032520084884524
+ViewCount is missing : -1.0020136246473401
+
+
+	Class 2 (Majority voting (class)=Intermediate)
+
+Decision Stump
+
+Classifications
+
+ques_size <= 3793.955617166292 : 0.0664707089371221
+ques_size > 3793.955617166292 : -0.710064965395269
+ques_size is missing : 1.0036004576212783
+
+
+	Class 3 (Majority voting (class)=Advanced)
+
+Decision Stump
+
+Classifications
+
+ques_size <= 3793.955617166292 : -0.10952523967888336
+ques_size > 3793.955617166292 : 1.2085764971956992
+ques_size is missing : -1.0016564881920564
+
+
+Iteration 6
+	Class 1 (Majority voting (class)=Basic)
+
+Decision Stump
+
+Classifications
+
+Question_user_repo <= 457.57980531572275 : 0.4536882111156534
+Question_user_repo > 457.57980531572275 : -0.10185437392025765
+Question_user_repo is missing : -1.0005293976059149
+
+
+	Class 2 (Majority voting (class)=Intermediate)
+
+Decision Stump
+
+Classifications
+
+Question_user_repo <= 93941.0 : 0.0314175642718928
+Question_user_repo > 93941.0 : -1.3293738028452367
+Question_user_repo is missing : 1.000945703328482
+
+
+	Class 3 (Majority voting (class)=Advanced)
+
+Decision Stump
+
+Classifications
+
+Question_user_repo <= 180.06103962901489 : -1.1262782337900363
+Question_user_repo > 180.06103962901489 : 0.06829457704805846
+Question_user_repo is missing : -1.0004358364135402
+
+
+Iteration 7
+	Class 1 (Majority voting (class)=Basic)
+
+Decision Stump
+
+Classifications
+
+ques_size <= 207.49549265467294 : 0.8448045424360869
+ques_size > 207.49549265467294 : -0.05001401732452121
+ques_size is missing : -1.000139451703094
+
+
+	Class 2 (Majority voting (class)=Intermediate)
+
+Decision Stump
+
+Classifications
+
+ViewCount <= 255.76129243721212 : 0.7215908695842415
+ViewCount > 255.76129243721212 : -0.01735048436124448
+ViewCount is missing : 1.0002490520060652
+
+
+	Class 3 (Majority voting (class)=Advanced)
+
+Decision Stump
+
+Classifications
+
+ques_size <= 320.5 : -0.7152568053936887
+ques_size > 320.5 : 0.06053217396637283
+ques_size is missing : -1.0001148292180362
+
+
+Iteration 8
+	Class 1 (Majority voting (class)=Basic)
+
+Decision Stump
+
+Classifications
+
+favoritecount <= 32.126091293132035 : 0.02545347239884237
+favoritecount > 32.126091293132035 : -0.7750465959867545
+favoritecount is missing : 0.22106642561469245
+
+
+	Class 2 (Majority voting (class)=Intermediate)
+
+Decision Stump
+
+Classifications
+
+ques_size <= 2133.4906064696897 : -0.04460356232156111
+ques_size > 2133.4906064696897 : 0.30329597728808716
+ques_size is missing : 1.0000656332513282
+
+
+	Class 3 (Majority voting (class)=Advanced)
+
+Decision Stump
+
+Classifications
+
+favoritecount <= 20.526588421740833 : -0.07200011481218165
+favoritecount > 20.526588421740833 : 0.8546541235513567
+favoritecount is missing : -0.17902657091222757
+
+
+Iteration 9
+	Class 1 (Majority voting (class)=Basic)
+
+Decision Stump
+
+Classifications
+
+ViewCount <= 103200.71187090472 : -0.04434489946392844
+ViewCount > 103200.71187090472 : 1.1403100871575962
+ViewCount is missing : -1.000021864976346
+
+
+	Class 2 (Majority voting (class)=Intermediate)
+
+Decision Stump
+
+Classifications
+
+ViewCount <= 3572.919790133621 : -0.16152566530428672
+ViewCount > 3572.919790133621 : 0.09003615984247085
+ViewCount is missing : 1.0000349531044106
+
+
+	Class 3 (Majority voting (class)=Advanced)
+
+Decision Stump
+
+Classifications
+
+ViewCount <= 23216.5 : 0.10229565458228974
+ViewCount > 23216.5 : -0.7903295544403584
+ViewCount is missing : -1.0000137899464567
+
+
+Iteration 10
+	Class 1 (Majority voting (class)=Basic)
+
+Decision Stump
+
+Classifications
+
+favoritecount <= 3.0047399099477214 : 0.19508528558968927
+favoritecount > 3.0047399099477214 : -0.1642297174609644
+favoritecount is missing : 0.06936452770817292
+
+
+	Class 2 (Majority voting (class)=Intermediate)
+
+Decision Stump
+
+Classifications
+
+ViewCount <= 8035.9146025653445 : 0.10936583229782068
+ViewCount > 8035.9146025653445 : -0.14113374722300168
+ViewCount is missing : 1.0000092132136362
+
+
+	Class 3 (Majority voting (class)=Advanced)
+
+Decision Stump
+
+Classifications
+
+ViewCount <= 1220.4300317533043 : -0.5431082318260424
+ViewCount > 1220.4300317533043 : 0.0785180540987644
+ViewCount is missing : -1.000003634935815
+
+Number of performed iterations: 10
+
+
+Time taken to build model: 0.06 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         917               59.1613 %
+Incorrectly Classified Instances       633               40.8387 %
+Kappa statistic                          0.382 
+Mean absolute error                      0.3574
+Root mean squared error                  0.4195
+Relative absolute error                 80.9189 %
+Root relative squared error             89.2734 %
+Total Number of Instances             1550     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.682    0.257    0.625      0.682    0.652      0.419    0.787     0.697     Basic
+                 0.342    0.165    0.488      0.342    0.402      0.199    0.659     0.467     Intermediate
+                 0.737    0.196    0.616      0.737    0.671      0.517    0.841     0.661     Advanced
+Weighted Avg.    0.592    0.210    0.579      0.592    0.579      0.379    0.763     0.614     
+
+=== Confusion Matrix ===
+
+   a   b   c   <-- classified as
+ 408 108  82 |   a = Basic
+ 190 167 131 |   b = Intermediate
+  55  67 342 |   c = Advanced
+

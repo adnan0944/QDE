@@ -1,0 +1,69 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.meta.AdaBoostM1 -P 100 -S 1 -I 10 -W weka.classifiers.trees.DecisionStump
+Relation:     new_data-weka.filters.unsupervised.attribute.Remove-R1-2,5,10-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1
+Instances:    1550
+Attributes:   7
+              score
+              ViewCount
+              CommentCount
+              ques_size
+              favoritecount
+              Question_user_repo
+              Majority voting (class)
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+AdaBoostM1: No boosting possible, one classifier used!
+Decision Stump
+
+Classifications
+
+ViewCount <= 8320.890166351355 : Advanced
+ViewCount > 8320.890166351355 : Basic
+ViewCount is missing : Intermediate
+
+Class distributions
+
+ViewCount <= 8320.890166351355
+Basic	Intermediate	Advanced	
+0.28154327424400416	0.31386861313868614	0.4045881126173097	
+ViewCount > 8320.890166351355
+Basic	Intermediate	Advanced	
+0.5568760611205433	0.3140916808149406	0.12903225806451613	
+ViewCount is missing
+Basic	Intermediate	Advanced	
+0.0	1.0	0.0	
+
+
+
+Time taken to build model: 0 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         712               45.9355 %
+Incorrectly Classified Instances       838               54.0645 %
+Kappa statistic                          0.1908
+Mean absolute error                      0.4181
+Root mean squared error                  0.4578
+Relative absolute error                 94.6796 %
+Root relative squared error             97.4241 %
+Total Number of Instances             1550     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.540    0.273    0.554      0.540    0.547      0.268    0.610     0.476     Basic
+                 0.004    0.000    1.000      0.004    0.008      0.053    0.452     0.291     Intermediate
+                 0.834    0.532    0.401      0.834    0.542      0.285    0.636     0.378     Advanced
+Weighted Avg.    0.459    0.265    0.649      0.459    0.376      0.206    0.568     0.388     
+
+=== Confusion Matrix ===
+
+   a   b   c   <-- classified as
+ 323   0 275 |   a = Basic
+ 183   2 303 |   b = Intermediate
+  77   0 387 |   c = Advanced
+

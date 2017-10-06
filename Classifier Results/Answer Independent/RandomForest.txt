@@ -1,0 +1,52 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.RandomForest -P 100 -I 100 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1
+Relation:     new_data-weka.filters.unsupervised.attribute.Remove-R1-2,5,10-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1
+Instances:    1550
+Attributes:   7
+              score
+              ViewCount
+              CommentCount
+              ques_size
+              favoritecount
+              Question_user_repo
+              Majority voting (class)
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+RandomForest
+
+Bagging with 100 iterations and base learner
+
+weka.classifiers.trees.RandomTree -K 0 -M 1.0 -V 0.001 -S 1 -do-not-check-capabilities
+
+Time taken to build model: 1.08 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        1115               71.9355 %
+Incorrectly Classified Instances       435               28.0645 %
+Kappa statistic                          0.5773
+Mean absolute error                      0.2807
+Root mean squared error                  0.3588
+Relative absolute error                 63.5599 %
+Root relative squared error             76.3516 %
+Total Number of Instances             1550     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.681    0.174    0.710      0.681    0.695      0.510    0.850     0.759     Basic
+                 0.623    0.165    0.635      0.623    0.629      0.461    0.815     0.673     Intermediate
+                 0.871    0.087    0.811      0.871    0.840      0.769    0.963     0.933     Advanced
+Weighted Avg.    0.719    0.145    0.717      0.719    0.718      0.572    0.873     0.784     
+
+=== Confusion Matrix ===
+
+   a   b   c   <-- classified as
+ 407 144  47 |   a = Basic
+ 137 304  47 |   b = Intermediate
+  29  31 404 |   c = Advanced
+

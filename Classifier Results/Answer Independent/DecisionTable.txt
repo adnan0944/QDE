@@ -1,0 +1,60 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.rules.DecisionTable -X 1 -S "weka.attributeSelection.BestFirst -D 1 -N 5"
+Relation:     new_data-weka.filters.unsupervised.attribute.Remove-R1-2,5,10-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1
+Instances:    1550
+Attributes:   7
+              score
+              ViewCount
+              CommentCount
+              ques_size
+              favoritecount
+              Question_user_repo
+              Majority voting (class)
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Decision Table:
+
+Number of training instances: 1550
+Number of Rules : 156
+Non matches covered by Majority class.
+	Best first.
+	Start set: no attributes
+	Search direction: forward
+	Stale search after 5 node expansions
+	Total number of subsets evaluated: 29
+	Merit of best subset found:   64.645
+Evaluation (for feature selection): CV (leave one out) 
+Feature set: 2,3,4,7
+
+Time taken to build model: 0.05 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         936               60.3871 %
+Incorrectly Classified Instances       614               39.6129 %
+Kappa statistic                          0.3915
+Mean absolute error                      0.3423
+Root mean squared error                  0.4116
+Relative absolute error                 77.5206 %
+Root relative squared error             87.5874 %
+Total Number of Instances             1550     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.873    0.349    0.611      0.873    0.719      0.513    0.832     0.693     Basic
+                 0.199    0.098    0.483      0.199    0.282      0.139    0.605     0.448     Intermediate
+                 0.683    0.164    0.640      0.683    0.661      0.510    0.843     0.674     Advanced
+Weighted Avg.    0.604    0.214    0.579      0.604    0.564      0.395    0.764     0.611     
+
+=== Confusion Matrix ===
+
+   a   b   c   <-- classified as
+ 522  40  36 |   a = Basic
+ 249  97 142 |   b = Intermediate
+  83  64 317 |   c = Advanced
+
