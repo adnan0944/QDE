@@ -1,2 +1,2 @@
 # QDE
-This a readMe file for QDE
+This is a readMe file for QDE
