@@ -1,0 +1,111 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.bayes.NaiveBayes 
+Relation:     new_data-weka.filters.unsupervised.attribute.Remove-R2-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1
+Instances:    1550
+Attributes:   10
+              Median
+              score
+              ViewCount
+              AnswerCount
+              CommentCount
+              ques_size
+              favoritecount
+              Question_user_repo
+              QATimeGap
+              Majority voting (class)
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Naive Bayes Classifier
+
+                            Class
+Attribute                   Basic Intermediate     Advanced
+                           (0.39)       (0.31)        (0.3)
+============================================================
+Median
+  mean                 187012.1917  101515.7316   99704.1911
+  std. dev.            530080.5756  362449.6068  236484.2429
+  weight sum                   598          488          464
+  precision              2899.9401    2899.9401    2899.9401
+
+score
+  mean                     35.1242      25.0675      22.7181
+  std. dev.                82.6653      56.7842      20.2689
+  weight sum                   598          488          464
+  precision                 1.3238       1.3238       1.3238
+
+ViewCount
+  mean                   39956.469    14493.616     5589.354
+  std. dev.             99728.4965   36729.5763    6327.9422
+  weight sum                   598          486          464
+  precision               618.3739     618.3739     618.3739
+
+AnswerCount
+  mean                      5.3119       4.9381       4.0519
+  std. dev.                 3.9493       3.6439        3.015
+  weight sum                   598          486          464
+  precision                 0.0844       0.0844       0.0844
+
+CommentCount
+  mean                      2.0926       3.0022       2.8574
+  std. dev.                 2.7849       3.4325       3.1543
+  weight sum                   598          486          464
+  precision                 0.0378       0.0378       0.0378
+
+ques_size
+  mean                     888.241    1366.5323      1902.87
+  std. dev.              1065.8184    1113.5203     2019.236
+  weight sum                   598          486          464
+  precision                12.4699      12.4699      12.4699
+
+favoritecount
+  mean                     13.5956      10.2638       7.6911
+  std. dev.                48.6078      26.4141      11.1379
+  weight sum                   509          428          440
+  precision                 1.4901       1.4901       1.4901
+
+Question_user_repo
+  mean                   9558.0753    7389.4092   13126.8472
+  std. dev.             24618.9197   13120.5121    37567.025
+  weight sum                   598          486          464
+  precision               288.3382     288.3382     288.3382
+
+QATimeGap
+  mean                   1340.3962    2094.0291    4677.1239
+  std. dev.             25369.4584   18092.5566   25954.4643
+  weight sum                   598          486          464
+  precision               797.5691     797.5691     797.5691
+
+
+
+Time taken to build model: 0.03 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         569               36.7097 %
+Incorrectly Classified Instances       981               63.2903 %
+Kappa statistic                          0.084 
+Mean absolute error                      0.4143
+Root mean squared error                  0.5761
+Relative absolute error                 93.81   %
+Root relative squared error            122.6081 %
+Total Number of Instances             1550     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.140    0.044    0.667      0.140    0.232      0.172    0.687     0.562     Basic
+                 0.162    0.180    0.293      0.162    0.208      -0.022   0.520     0.318     Intermediate
+                 0.875    0.689    0.352      0.875    0.502      0.196    0.689     0.470     Advanced
+Weighted Avg.    0.367    0.280    0.455      0.367    0.305      0.118    0.635     0.458     
+
+=== Confusion Matrix ===
+
+   a   b   c   <-- classified as
+  84 142 372 |   a = Basic
+  33  79 376 |   b = Intermediate
+   9  49 406 |   c = Advanced
+

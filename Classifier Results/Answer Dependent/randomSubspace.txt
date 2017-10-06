@@ -1,0 +1,1767 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.meta.RandomSubSpace -P 0.5 -S 1 -num-slots 1 -I 10 -W weka.classifiers.trees.REPTree -- -M 2 -V 0.001 -N 3 -S 1 -L -1 -I 0.0
+Relation:     new_data-weka.filters.unsupervised.attribute.Remove-R2-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1
+Instances:    1550
+Attributes:   10
+              Median
+              score
+              ViewCount
+              AnswerCount
+              CommentCount
+              ques_size
+              favoritecount
+              Question_user_repo
+              QATimeGap
+              Majority voting (class)
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+All the base classifiers: 
+
+FilteredClassifier using weka.classifiers.trees.REPTree -M 2 -V 0.001 -N 3 -S -88544834 -L -1 -I 0.0 on data filtered through weka.filters.unsupervised.attribute.Remove -V -R 9,7,6,4,3,10
+
+Filtered Header
+@relation 'new_data-weka.filters.unsupervised.attribute.Remove-R2-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.unsupervised.attribute.Remove-V-R9,7,6,4,3,10'
+
+@attribute QATimeGap numeric
+@attribute favoritecount numeric
+@attribute ques_size numeric
+@attribute AnswerCount numeric
+@attribute ViewCount numeric
+@attribute 'Majority voting (class)' {Basic,Intermediate,Advanced}
+
+@data
+
+
+Classifier Model
+
+REPTree
+============
+
+QATimeGap < 7.03
+|   QATimeGap < 3.04
+|   |   ques_size < 2012.5
+|   |   |   ViewCount < 59969.82
+|   |   |   |   AnswerCount < 8.5
+|   |   |   |   |   favoritecount < 20.2
+|   |   |   |   |   |   QATimeGap < 2.93
+|   |   |   |   |   |   |   QATimeGap < 2.04
+|   |   |   |   |   |   |   |   ques_size < 299.5 : Basic (16.75/0.02) [5.95/2.02]
+|   |   |   |   |   |   |   |   ques_size >= 299.5 : Basic (47.11/14.71) [26.85/11.05]
+|   |   |   |   |   |   |   QATimeGap >= 2.04
+|   |   |   |   |   |   |   |   ques_size < 699.79 : Advanced (2.94/0.94) [4/1]
+|   |   |   |   |   |   |   |   ques_size >= 699.79 : Intermediate (4.94/0) [2/0]
+|   |   |   |   |   |   QATimeGap >= 2.93 : Basic (73.07/8) [22.87/5]
+|   |   |   |   |   favoritecount >= 20.2 : Intermediate (10.34/5.8) [2.48/1.47]
+|   |   |   |   AnswerCount >= 8.5
+|   |   |   |   |   favoritecount < 9.12 : Basic (14.68/7.01) [6.68/2.01]
+|   |   |   |   |   favoritecount >= 9.12 : Intermediate (7.34/0.33) [3.34/1.33]
+|   |   |   ViewCount >= 59969.82
+|   |   |   |   ques_size < 676.5 : Basic (31.03/0.03) [14.03/0.03]
+|   |   |   |   ques_size >= 676.5
+|   |   |   |   |   favoritecount < 13.9 : Basic (2/0) [1/0]
+|   |   |   |   |   favoritecount >= 13.9 : Intermediate (2/0) [2/1]
+|   |   ques_size >= 2012.5 : Intermediate (8.01/2) [3.01/2]
+|   QATimeGap >= 3.04
+|   |   QATimeGap < 4
+|   |   |   QATimeGap < 3.34 : Advanced (8.01/1.01) [2.01/0.01]
+|   |   |   QATimeGap >= 3.34
+|   |   |   |   ViewCount < 6502.33
+|   |   |   |   |   ques_size < 693.69 : Advanced (3/0) [3/0]
+|   |   |   |   |   ques_size >= 693.69 : Intermediate (2/0) [0/0]
+|   |   |   |   ViewCount >= 6502.33 : Intermediate (7.01/0) [5.01/1]
+|   |   QATimeGap >= 4
+|   |   |   QATimeGap < 4.04 : Basic (60.06/17.06) [30.06/5.06]
+|   |   |   QATimeGap >= 4.04
+|   |   |   |   QATimeGap < 5
+|   |   |   |   |   QATimeGap < 4.19 : Advanced (4/0) [5/1]
+|   |   |   |   |   QATimeGap >= 4.19
+|   |   |   |   |   |   ques_size < 418.26 : Intermediate (4/0) [0/0]
+|   |   |   |   |   |   ques_size >= 418.26
+|   |   |   |   |   |   |   AnswerCount < 6.22
+|   |   |   |   |   |   |   |   QATimeGap < 4.38
+|   |   |   |   |   |   |   |   |   QATimeGap < 4.21 : Intermediate (2/0) [0/0]
+|   |   |   |   |   |   |   |   |   QATimeGap >= 4.21 : Advanced (2/0) [1/0]
+|   |   |   |   |   |   |   |   QATimeGap >= 4.38 : Intermediate (5/0) [1/0]
+|   |   |   |   |   |   |   AnswerCount >= 6.22 : Advanced (5/0) [2/1]
+|   |   |   |   QATimeGap >= 5
+|   |   |   |   |   ques_size < 1504.87
+|   |   |   |   |   |   ViewCount < 22399.8
+|   |   |   |   |   |   |   favoritecount < 2.66
+|   |   |   |   |   |   |   |   ViewCount < 455.5 : Intermediate (5.04/1.04) [0.52/0]
+|   |   |   |   |   |   |   |   ViewCount >= 455.5
+|   |   |   |   |   |   |   |   |   ques_size < 815
+|   |   |   |   |   |   |   |   |   |   ViewCount < 6988.5
+|   |   |   |   |   |   |   |   |   |   |   ViewCount < 5236.64
+|   |   |   |   |   |   |   |   |   |   |   |   ques_size < 195.5 : Basic (2.52/0) [0.52/0]
+|   |   |   |   |   |   |   |   |   |   |   |   ques_size >= 195.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   ques_size < 629 : Intermediate (6.56/2.04) [1.01/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   ques_size >= 629 : Basic (5.52/1.01) [2.04/0.01]
+|   |   |   |   |   |   |   |   |   |   |   ViewCount >= 5236.64 : Intermediate (5.52/0) [0.52/0]
+|   |   |   |   |   |   |   |   |   |   ViewCount >= 6988.5 : Basic (8.56/1.01) [3.01/0.01]
+|   |   |   |   |   |   |   |   |   ques_size >= 815 : Basic (16.57/2.02) [7.53/3.53]
+|   |   |   |   |   |   |   favoritecount >= 2.66 : Basic (46.79/22.49) [27.94/14.49]
+|   |   |   |   |   |   ViewCount >= 22399.8
+|   |   |   |   |   |   |   ques_size < 767.5
+|   |   |   |   |   |   |   |   QATimeGap < 5.07
+|   |   |   |   |   |   |   |   |   favoritecount < 20
+|   |   |   |   |   |   |   |   |   |   favoritecount < 14.5 : Basic (4/1) [3/0]
+|   |   |   |   |   |   |   |   |   |   favoritecount >= 14.5 : Intermediate (2/0) [0/0]
+|   |   |   |   |   |   |   |   |   favoritecount >= 20 : Basic (4/0) [1/0]
+|   |   |   |   |   |   |   |   QATimeGap >= 5.07
+|   |   |   |   |   |   |   |   |   favoritecount < 33.63
+|   |   |   |   |   |   |   |   |   |   favoritecount < 5.5 : Intermediate (2.17/0) [1/1]
+|   |   |   |   |   |   |   |   |   |   favoritecount >= 5.5 : Basic (6.51/2.51) [1.01/0.01]
+|   |   |   |   |   |   |   |   |   favoritecount >= 33.63 : Intermediate (4.34/0) [3/1]
+|   |   |   |   |   |   |   ques_size >= 767.5 : Basic (8.01/1.01) [4.01/2.01]
+|   |   |   |   |   ques_size >= 1504.87 : Intermediate (31.03/14) [17.03/10]
+QATimeGap >= 7.03
+|   ViewCount < 8153.41
+|   |   ViewCount < 610.46
+|   |   |   ViewCount < 259
+|   |   |   |   ques_size < 733 : Basic (2/1) [1/0]
+|   |   |   |   ques_size >= 733 : Intermediate (19.02/2) [11.02/5]
+|   |   |   ViewCount >= 259
+|   |   |   |   AnswerCount < 1.16 : Basic (4/0) [2/0]
+|   |   |   |   AnswerCount >= 1.16 : Intermediate (27.03/9) [15.03/6]
+|   |   ViewCount >= 610.46
+|   |   |   favoritecount < 1.04
+|   |   |   |   QATimeGap < 48.29
+|   |   |   |   |   ViewCount < 2052.5
+|   |   |   |   |   |   QATimeGap < 33
+|   |   |   |   |   |   |   ViewCount < 1063.5
+|   |   |   |   |   |   |   |   ques_size < 1318.5 : Basic (2.38/0.28) [3.28/1]
+|   |   |   |   |   |   |   |   ques_size >= 1318.5 : Intermediate (2/0) [1/0]
+|   |   |   |   |   |   |   ViewCount >= 1063.5 : Intermediate (4.1/0) [5/3]
+|   |   |   |   |   |   QATimeGap >= 33 : Basic (2/0) [1/1]
+|   |   |   |   |   ViewCount >= 2052.5
+|   |   |   |   |   |   ViewCount < 5323.47 : Basic (5.47/0.01) [4.29/2.29]
+|   |   |   |   |   |   ViewCount >= 5323.47 : Advanced (5.19/4.19) [2.01/0.01]
+|   |   |   |   QATimeGap >= 48.29
+|   |   |   |   |   favoritecount < 0.87 : Advanced (7.13/1.42) [0.42/0.06]
+|   |   |   |   |   favoritecount >= 0.87 : Intermediate (5.94/0.6) [7.35/4.3]
+|   |   |   favoritecount >= 1.04
+|   |   |   |   AnswerCount < 5.99
+|   |   |   |   |   AnswerCount < 3.01
+|   |   |   |   |   |   AnswerCount < 2.96
+|   |   |   |   |   |   |   ques_size < 5870.09
+|   |   |   |   |   |   |   |   AnswerCount < 1.04
+|   |   |   |   |   |   |   |   |   ques_size < 1491.5
+|   |   |   |   |   |   |   |   |   |   ViewCount < 1700.46 : Advanced (3/1) [4.82/1.82]
+|   |   |   |   |   |   |   |   |   |   ViewCount >= 1700.46 : Intermediate (5.82/2.91) [4.01/2]
+|   |   |   |   |   |   |   |   |   ques_size >= 1491.5 : Intermediate (6.82/0) [5.01/0]
+|   |   |   |   |   |   |   |   AnswerCount >= 1.04
+|   |   |   |   |   |   |   |   |   QATimeGap < 425.54
+|   |   |   |   |   |   |   |   |   |   ques_size < 1189.27 : Advanced (27.75/4.75) [17.03/2.03]
+|   |   |   |   |   |   |   |   |   |   ques_size >= 1189.27
+|   |   |   |   |   |   |   |   |   |   |   AnswerCount < 2.26 : Intermediate (14.55/4.81) [8.92/4]
+|   |   |   |   |   |   |   |   |   |   |   AnswerCount >= 2.26
+|   |   |   |   |   |   |   |   |   |   |   |   QATimeGap < 18.23 : Intermediate (2/0) [1/0]
+|   |   |   |   |   |   |   |   |   |   |   |   QATimeGap >= 18.23 : Advanced (8.01/1.01) [5.01/1.01]
+|   |   |   |   |   |   |   |   |   QATimeGap >= 425.54 : Advanced (24.9/2.02) [13.56/3.02]
+|   |   |   |   |   |   |   ques_size >= 5870.09 : Advanced (13.01/0.01) [4.01/0.01]
+|   |   |   |   |   |   AnswerCount >= 2.96 : Intermediate (23.84/8.91) [8.84/4.91]
+|   |   |   |   |   AnswerCount >= 3.01
+|   |   |   |   |   |   ViewCount < 1787.77 : Advanced (33.85/11.85) [12.03/2.03]
+|   |   |   |   |   |   ViewCount >= 1787.77
+|   |   |   |   |   |   |   ViewCount < 3765.8 : Advanced (65.88/5.97) [29.97/1.97]
+|   |   |   |   |   |   |   ViewCount >= 3765.8
+|   |   |   |   |   |   |   |   ques_size < 445.53 : Intermediate (4.91/1.91) [1/0]
+|   |   |   |   |   |   |   |   ques_size >= 445.53
+|   |   |   |   |   |   |   |   |   ViewCount < 3821.59 : Intermediate (2/0) [0/0]
+|   |   |   |   |   |   |   |   |   ViewCount >= 3821.59
+|   |   |   |   |   |   |   |   |   |   QATimeGap < 154.63
+|   |   |   |   |   |   |   |   |   |   |   QATimeGap < 11.03
+|   |   |   |   |   |   |   |   |   |   |   |   AnswerCount < 4
+|   |   |   |   |   |   |   |   |   |   |   |   |   AnswerCount < 3.46 : Advanced (4/0) [0/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   AnswerCount >= 3.46 : Intermediate (4.91/1) [5.91/2]
+|   |   |   |   |   |   |   |   |   |   |   |   AnswerCount >= 4 : Advanced (17.02/0.02) [9.02/4.02]
+|   |   |   |   |   |   |   |   |   |   |   QATimeGap >= 11.03 : Advanced (41.04/1.04) [18.04/3.04]
+|   |   |   |   |   |   |   |   |   |   QATimeGap >= 154.63 : Advanced (12.83/4.92) [10.83/1.01]
+|   |   |   |   AnswerCount >= 5.99
+|   |   |   |   |   favoritecount < 4.45 : Basic (8.01/3.01) [4.01/1.01]
+|   |   |   |   |   favoritecount >= 4.45 : Intermediate (7.01/2) [3.01/0]
+|   ViewCount >= 8153.41
+|   |   QATimeGap < 193.57
+|   |   |   favoritecount < 18.01
+|   |   |   |   ques_size < 8257.6
+|   |   |   |   |   AnswerCount < 3.03 : Basic (32.05/8.44) [16.44/9.03]
+|   |   |   |   |   AnswerCount >= 3.03
+|   |   |   |   |   |   QATimeGap < 12.5
+|   |   |   |   |   |   |   QATimeGap < 7.85 : Intermediate (3/0) [0/0]
+|   |   |   |   |   |   |   QATimeGap >= 7.85
+|   |   |   |   |   |   |   |   QATimeGap < 8.43 : Basic (4/0) [4.81/0.81]
+|   |   |   |   |   |   |   |   QATimeGap >= 8.43
+|   |   |   |   |   |   |   |   |   ques_size < 392.94 : Basic (4/0) [4/1]
+|   |   |   |   |   |   |   |   |   ques_size >= 392.94 : Intermediate (17.02/8) [8.02/2]
+|   |   |   |   |   |   QATimeGap >= 12.5 : Intermediate (29.64/8) [12.03/7]
+|   |   |   |   ques_size >= 8257.6 : Advanced (2/0) [0/0]
+|   |   |   favoritecount >= 18.01 : Basic (22.4/14) [26.81/15.22]
+|   |   QATimeGap >= 193.57
+|   |   |   favoritecount < 5.33 : Advanced (14.75/0.75) [7.01/1.01]
+|   |   |   favoritecount >= 5.33 : Intermediate (5.27/0) [2.01/1]
+
+Size of the tree : 163
+
+FilteredClassifier using weka.classifiers.trees.REPTree -M 2 -V 0.001 -N 3 -S -612151504 -L -1 -I 0.0 on data filtered through weka.filters.unsupervised.attribute.Remove -V -R 4,2,1,5,6,10
+
+Filtered Header
+@relation 'new_data-weka.filters.unsupervised.attribute.Remove-R2-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.unsupervised.attribute.Remove-V-R4,2,1,5,6,10'
+
+@attribute AnswerCount numeric
+@attribute score numeric
+@attribute Median numeric
+@attribute CommentCount numeric
+@attribute ques_size numeric
+@attribute 'Majority voting (class)' {Basic,Intermediate,Advanced}
+
+@data
+
+
+Classifier Model
+
+REPTree
+============
+
+Median < 10.03
+|   ques_size < 475.5 : Basic (76.36/20.36) [44/11]
+|   ques_size >= 475.5
+|   |   ques_size < 563 : Intermediate (21.1/8) [4/2]
+|   |   ques_size >= 563
+|   |   |   ques_size < 738.5 : Basic (33.16/5.16) [15/7]
+|   |   |   ques_size >= 738.5
+|   |   |   |   ques_size < 1659.22
+|   |   |   |   |   ques_size < 1411.5 : Basic (50.24/16.24) [29/9]
+|   |   |   |   |   ques_size >= 1411.5 : Intermediate (15.07/3) [6/3]
+|   |   |   |   ques_size >= 1659.22 : Basic (17.08/3.08) [3/1]
+Median >= 10.03
+|   AnswerCount < 5.99
+|   |   Median < 1224.63
+|   |   |   ques_size < 4809.62
+|   |   |   |   AnswerCount < 3.01
+|   |   |   |   |   ques_size < 1294.06
+|   |   |   |   |   |   AnswerCount < 2.94
+|   |   |   |   |   |   |   AnswerCount < 2.01
+|   |   |   |   |   |   |   |   AnswerCount < 1.99
+|   |   |   |   |   |   |   |   |   AnswerCount < 1.03
+|   |   |   |   |   |   |   |   |   |   ques_size < 624 : Advanced (5.01/2.01) [4/2]
+|   |   |   |   |   |   |   |   |   |   ques_size >= 624
+|   |   |   |   |   |   |   |   |   |   |   Median < 34.75 : Basic (4/1) [1/0]
+|   |   |   |   |   |   |   |   |   |   |   Median >= 34.75 : Intermediate (2.01/0) [3/1]
+|   |   |   |   |   |   |   |   |   AnswerCount >= 1.03 : Advanced (13.02/1.02) [8/2]
+|   |   |   |   |   |   |   |   AnswerCount >= 1.99 : Basic (18.03/6.03) [16/2]
+|   |   |   |   |   |   |   AnswerCount >= 2.01
+|   |   |   |   |   |   |   |   score < 7.79 : Intermediate (3.03/0) [1/1]
+|   |   |   |   |   |   |   |   score >= 7.79
+|   |   |   |   |   |   |   |   |   CommentCount < 0.48 : Intermediate (2/0) [2/0]
+|   |   |   |   |   |   |   |   |   CommentCount >= 0.48 : Advanced (12/1) [7/1]
+|   |   |   |   |   |   AnswerCount >= 2.94 : Basic (32.06/16.06) [26/12]
+|   |   |   |   |   ques_size >= 1294.06
+|   |   |   |   |   |   ques_size < 1423.03 : Intermediate (11.02/0) [4/0]
+|   |   |   |   |   |   ques_size >= 1423.03
+|   |   |   |   |   |   |   CommentCount < 3.2
+|   |   |   |   |   |   |   |   ques_size < 3397 : Basic (38.07/16.07) [18/11]
+|   |   |   |   |   |   |   |   ques_size >= 3397 : Intermediate (5.01/0) [5/1]
+|   |   |   |   |   |   |   CommentCount >= 3.2 : Intermediate (20.03/4) [10/4]
+|   |   |   |   AnswerCount >= 3.01
+|   |   |   |   |   AnswerCount < 3.99
+|   |   |   |   |   |   ques_size < 356.29 : Intermediate (4.01/0) [1/1]
+|   |   |   |   |   |   ques_size >= 356.29
+|   |   |   |   |   |   |   CommentCount < 7.04
+|   |   |   |   |   |   |   |   ques_size < 2715.69
+|   |   |   |   |   |   |   |   |   Median < 42.93
+|   |   |   |   |   |   |   |   |   |   CommentCount < 4.85
+|   |   |   |   |   |   |   |   |   |   |   score < 8.34 : Intermediate (5.07/0) [4/1]
+|   |   |   |   |   |   |   |   |   |   |   score >= 8.34 : Advanced (19/4) [3/0]
+|   |   |   |   |   |   |   |   |   |   CommentCount >= 4.85 : Advanced (7.02/0.02) [4/1]
+|   |   |   |   |   |   |   |   |   Median >= 42.93 : Advanced (20/0) [5/2]
+|   |   |   |   |   |   |   |   ques_size >= 2715.69 : Intermediate (7.01/2) [1/0]
+|   |   |   |   |   |   |   CommentCount >= 7.04 : Intermediate (3.01/0) [0/0]
+|   |   |   |   |   AnswerCount >= 3.99
+|   |   |   |   |   |   score < 19.34
+|   |   |   |   |   |   |   ques_size < 2047.5
+|   |   |   |   |   |   |   |   AnswerCount < 5.01
+|   |   |   |   |   |   |   |   |   AnswerCount < 4.99
+|   |   |   |   |   |   |   |   |   |   AnswerCount < 4.01
+|   |   |   |   |   |   |   |   |   |   |   score < 7.5
+|   |   |   |   |   |   |   |   |   |   |   |   ques_size < 480 : Basic (7.03/1.03) [1/0]
+|   |   |   |   |   |   |   |   |   |   |   |   ques_size >= 480 : Intermediate (16.08/5) [6/4]
+|   |   |   |   |   |   |   |   |   |   |   score >= 7.5
+|   |   |   |   |   |   |   |   |   |   |   |   Median < 55
+|   |   |   |   |   |   |   |   |   |   |   |   |   score < 12 : Basic (8/4) [8/3]
+|   |   |   |   |   |   |   |   |   |   |   |   |   score >= 12 : Intermediate (5/3) [5/2]
+|   |   |   |   |   |   |   |   |   |   |   |   Median >= 55 : Basic (7/0) [2/2]
+|   |   |   |   |   |   |   |   |   |   AnswerCount >= 4.01 : Advanced (20.05/8.05) [18/6]
+|   |   |   |   |   |   |   |   |   AnswerCount >= 4.99
+|   |   |   |   |   |   |   |   |   |   ques_size < 971.5 : Basic (17.04/4.04) [8/3]
+|   |   |   |   |   |   |   |   |   |   ques_size >= 971.5
+|   |   |   |   |   |   |   |   |   |   |   CommentCount < 6 : Intermediate (9.02/3) [3/1]
+|   |   |   |   |   |   |   |   |   |   |   CommentCount >= 6 : Basic (2.01/0.01) [1/0]
+|   |   |   |   |   |   |   |   AnswerCount >= 5.01 : Intermediate (9.02/2) [4/0]
+|   |   |   |   |   |   |   ques_size >= 2047.5 : Intermediate (23.06/7) [11/4]
+|   |   |   |   |   |   score >= 19.34
+|   |   |   |   |   |   |   AnswerCount < 4.99 : Advanced (42/11) [26/12]
+|   |   |   |   |   |   |   AnswerCount >= 4.99 : Basic (16/5) [7/3]
+|   |   |   ques_size >= 4809.62 : Advanced (22.04/2.04) [12/2]
+|   |   Median >= 1224.63
+|   |   |   ques_size < 1414.41
+|   |   |   |   CommentCount < 6.6
+|   |   |   |   |   ques_size < 443.5 : Basic (16/5) [9/3]
+|   |   |   |   |   ques_size >= 443.5
+|   |   |   |   |   |   score < 7.11 : Basic (9/2) [3/2]
+|   |   |   |   |   |   score >= 7.11 : Advanced (55/18) [22/7]
+|   |   |   |   CommentCount >= 6.6 : Intermediate (6/1) [4/1]
+|   |   |   ques_size >= 1414.41
+|   |   |   |   Median < 770909.79
+|   |   |   |   |   CommentCount < 7
+|   |   |   |   |   |   AnswerCount < 1.02 : Intermediate (4/1) [0/0]
+|   |   |   |   |   |   AnswerCount >= 1.02
+|   |   |   |   |   |   |   score < 87.25 : Advanced (87/6) [35/3]
+|   |   |   |   |   |   |   score >= 87.25 : Intermediate (2/0) [1/0]
+|   |   |   |   |   CommentCount >= 7 : Intermediate (3/1) [4/1]
+|   |   |   |   Median >= 770909.79 : Intermediate (4/1) [1/0]
+|   AnswerCount >= 5.99
+|   |   CommentCount < 1 : Basic (79.1/18.1) [37/14]
+|   |   CommentCount >= 1
+|   |   |   Median < 244977.5
+|   |   |   |   score < 44.79
+|   |   |   |   |   CommentCount < 1.97 : Intermediate (9.02/0) [4/1]
+|   |   |   |   |   CommentCount >= 1.97
+|   |   |   |   |   |   ques_size < 922.29 : Basic (32.07/15.07) [17/6]
+|   |   |   |   |   |   ques_size >= 922.29 : Intermediate (27.06/7) [13/8]
+|   |   |   |   score >= 44.79
+|   |   |   |   |   CommentCount < 3.89 : Advanced (15/3) [9/7]
+|   |   |   |   |   CommentCount >= 3.89
+|   |   |   |   |   |   AnswerCount < 6.5 : Basic (2/0) [0/0]
+|   |   |   |   |   |   AnswerCount >= 6.5
+|   |   |   |   |   |   |   Median < 141.1 : Intermediate (4/0) [2/1]
+|   |   |   |   |   |   |   Median >= 141.1 : Advanced (4/2) [2/1]
+|   |   |   Median >= 244977.5
+|   |   |   |   ques_size < 552.52 : Basic (12/1) [6/2]
+|   |   |   |   ques_size >= 552.52 : Intermediate (16/7) [12/5]
+
+Size of the tree : 117
+
+FilteredClassifier using weka.classifiers.trees.REPTree -M 2 -V 0.001 -N 3 -S -835073760 -L -1 -I 0.0 on data filtered through weka.filters.unsupervised.attribute.Remove -V -R 2,1,4,8,7,10
+
+Filtered Header
+@relation 'new_data-weka.filters.unsupervised.attribute.Remove-R2-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.unsupervised.attribute.Remove-V-R2,1,4,8,7,10'
+
+@attribute score numeric
+@attribute Median numeric
+@attribute AnswerCount numeric
+@attribute Question_user_repo numeric
+@attribute favoritecount numeric
+@attribute 'Majority voting (class)' {Basic,Intermediate,Advanced}
+
+@data
+
+
+Classifier Model
+
+REPTree
+============
+
+Median < 10.03
+|   Question_user_repo < 1745.04
+|   |   favoritecount < 28.71
+|   |   |   Median < 5.25 : Basic (41.49/2) [21.64/1.92]
+|   |   |   Median >= 5.25
+|   |   |   |   favoritecount < 0.5 : Intermediate (4.96/0.79) [4.13/2.09]
+|   |   |   |   favoritecount >= 0.5
+|   |   |   |   |   AnswerCount < 5.5
+|   |   |   |   |   |   Question_user_repo < 282.26
+|   |   |   |   |   |   |   Median < 8.5 : Basic (7.62/0) [5/1]
+|   |   |   |   |   |   |   Median >= 8.5
+|   |   |   |   |   |   |   |   AnswerCount < 4 : Intermediate (3.75/0.87) [1.07/0]
+|   |   |   |   |   |   |   |   AnswerCount >= 4 : Basic (2/0) [0.04/0.04]
+|   |   |   |   |   |   Question_user_repo >= 282.26 : Basic (18.62/0) [11.03/3.16]
+|   |   |   |   |   AnswerCount >= 5.5 : Basic (17.62/6.87) [4.15/1.15]
+|   |   favoritecount >= 28.71 : Advanced (3.95/0.95) [2.41/0.41]
+|   Question_user_repo >= 1745.04
+|   |   Question_user_repo < 5517.07 : Basic (52/30) [26.25/10.25]
+|   |   Question_user_repo >= 5517.07
+|   |   |   score < 7.17 : Basic (8/0) [6/1]
+|   |   |   score >= 7.17
+|   |   |   |   favoritecount < 8
+|   |   |   |   |   Question_user_repo < 25650 : Intermediate (31/11) [14.04/5.86]
+|   |   |   |   |   Question_user_repo >= 25650 : Basic (10.45/2) [1.06/0.06]
+|   |   |   |   favoritecount >= 8 : Basic (6.55/0) [9.17/2.04]
+Median >= 10.03
+|   AnswerCount < 5.99
+|   |   Median < 1147.16
+|   |   |   favoritecount < 1.04
+|   |   |   |   Question_user_repo < 60578.9
+|   |   |   |   |   Question_user_repo < 105.5 : Intermediate (7.56/2.27) [6.27/3.27]
+|   |   |   |   |   Question_user_repo >= 105.5 : Basic (51.79/25.32) [30.73/15.5]
+|   |   |   |   Question_user_repo >= 60578.9 : Advanced (2/0) [4.27/0.27]
+|   |   |   favoritecount >= 1.04
+|   |   |   |   score < 34.45
+|   |   |   |   |   AnswerCount < 3.02
+|   |   |   |   |   |   Question_user_repo < 932.48
+|   |   |   |   |   |   |   Question_user_repo < 601.47
+|   |   |   |   |   |   |   |   score < 15.5
+|   |   |   |   |   |   |   |   |   Question_user_repo < 107 : Intermediate (9.75/2.86) [1.86/0.86]
+|   |   |   |   |   |   |   |   |   Question_user_repo >= 107 : Basic (20.36/11.91) [12.59/6]
+|   |   |   |   |   |   |   |   score >= 15.5 : Basic (5.86/0) [2/0]
+|   |   |   |   |   |   |   Question_user_repo >= 601.47 : Advanced (28.92/8.92) [11/2]
+|   |   |   |   |   |   Question_user_repo >= 932.48
+|   |   |   |   |   |   |   Median < 158.5
+|   |   |   |   |   |   |   |   score < 15 : Intermediate (48.84/24.77) [25.04/10.59]
+|   |   |   |   |   |   |   |   score >= 15
+|   |   |   |   |   |   |   |   |   Question_user_repo < 8869.04 : Intermediate (10.86/3) [3/2]
+|   |   |   |   |   |   |   |   |   Question_user_repo >= 8869.04
+|   |   |   |   |   |   |   |   |   |   Question_user_repo < 14916.09 : Basic (3/0) [1/0]
+|   |   |   |   |   |   |   |   |   |   Question_user_repo >= 14916.09 : Intermediate (5/0) [1/0]
+|   |   |   |   |   |   |   Median >= 158.5
+|   |   |   |   |   |   |   |   score < 14 : Intermediate (13.59/1) [4.59/2]
+|   |   |   |   |   |   |   |   score >= 14 : Advanced (5/0) [3/1]
+|   |   |   |   |   AnswerCount >= 3.02
+|   |   |   |   |   |   AnswerCount < 3.96 : Advanced (47.68/12.68) [22.86/6.86]
+|   |   |   |   |   |   AnswerCount >= 3.96
+|   |   |   |   |   |   |   AnswerCount < 5.01
+|   |   |   |   |   |   |   |   AnswerCount < 4.99
+|   |   |   |   |   |   |   |   |   AnswerCount < 4.02
+|   |   |   |   |   |   |   |   |   |   Median < 17.75 : Advanced (12.73/6.73) [8.86/4.86]
+|   |   |   |   |   |   |   |   |   |   Median >= 17.75
+|   |   |   |   |   |   |   |   |   |   |   Median < 24.25 : Intermediate (7.86/0) [2.73/2.73]
+|   |   |   |   |   |   |   |   |   |   |   Median >= 24.25
+|   |   |   |   |   |   |   |   |   |   |   |   score < 14 : Basic (22.42/12.69) [9/4]
+|   |   |   |   |   |   |   |   |   |   |   |   score >= 14 : Intermediate (9/3) [6/4]
+|   |   |   |   |   |   |   |   |   AnswerCount >= 4.02 : Advanced (41.67/17.67) [21/7]
+|   |   |   |   |   |   |   |   AnswerCount >= 4.99 : Basic (25.5/10.78) [12.18/2.59]
+|   |   |   |   |   |   |   AnswerCount >= 5.01
+|   |   |   |   |   |   |   |   Median < 153.95 : Intermediate (13.9/4) [3/0]
+|   |   |   |   |   |   |   |   Median >= 153.95 : Advanced (3/-0) [4/1]
+|   |   |   |   score >= 34.45
+|   |   |   |   |   favoritecount < 8.69 : Advanced (35.33/2.33) [11/2]
+|   |   |   |   |   favoritecount >= 8.69
+|   |   |   |   |   |   AnswerCount < 4.96
+|   |   |   |   |   |   |   Question_user_repo < 6833.81
+|   |   |   |   |   |   |   |   score < 49.49 : Intermediate (4.85/2) [2/1]
+|   |   |   |   |   |   |   |   score >= 49.49 : Advanced (3/0) [4/3]
+|   |   |   |   |   |   |   Question_user_repo >= 6833.81 : Basic (2.28/0.28) [1/0]
+|   |   |   |   |   |   AnswerCount >= 4.96 : Basic (7/2) [3/1]
+|   |   Median >= 1147.16
+|   |   |   score < 52
+|   |   |   |   favoritecount < 2.02
+|   |   |   |   |   Median < 15897.42 : Advanced (7.87/2.42) [3.62/1.42]
+|   |   |   |   |   Median >= 15897.42
+|   |   |   |   |   |   AnswerCount < 2.11
+|   |   |   |   |   |   |   Question_user_repo < 2393.04 : Basic (5.45/2.04) [3/2]
+|   |   |   |   |   |   |   Question_user_repo >= 2393.04
+|   |   |   |   |   |   |   |   Question_user_repo < 5124.21 : Intermediate (3/0) [2/0]
+|   |   |   |   |   |   |   |   Question_user_repo >= 5124.21 : Basic (4/0) [1/1]
+|   |   |   |   |   |   AnswerCount >= 2.11
+|   |   |   |   |   |   |   Question_user_repo < 3384.95
+|   |   |   |   |   |   |   |   Median < 426196.05 : Basic (4/0) [0/0]
+|   |   |   |   |   |   |   |   Median >= 426196.05 : Advanced (3.42/1.42) [3/1]
+|   |   |   |   |   |   |   Question_user_repo >= 3384.95 : Advanced (4.45/1) [2.21/0]
+|   |   |   |   favoritecount >= 2.02
+|   |   |   |   |   Median < 1345731.74
+|   |   |   |   |   |   Question_user_repo < 537.5 : Intermediate (3.38/2.38) [4/1]
+|   |   |   |   |   |   Question_user_repo >= 537.5 : Advanced (115.64/19.58) [69.17/16.58]
+|   |   |   |   |   Median >= 1345731.74 : Intermediate (3.79/1.79) [3/1]
+|   |   |   score >= 52
+|   |   |   |   score < 105.23 : Basic (8/1) [5/3]
+|   |   |   |   score >= 105.23 : Intermediate (5/1) [4/1]
+|   AnswerCount >= 5.99
+|   |   Median < 70537.25
+|   |   |   score < 41.31
+|   |   |   |   favoritecount < 10
+|   |   |   |   |   AnswerCount < 6.05
+|   |   |   |   |   |   Median < 4304.75 : Basic (28.53/7.9) [11.82/3]
+|   |   |   |   |   |   Median >= 4304.75 : Intermediate (5/3) [1/0]
+|   |   |   |   |   AnswerCount >= 6.05
+|   |   |   |   |   |   AnswerCount < 6.99 : Intermediate (7.83/0) [7/0]
+|   |   |   |   |   |   AnswerCount >= 6.99 : Basic (45.37/18.92) [24.45/13.63]
+|   |   |   |   favoritecount >= 10 : Intermediate (19.52/5.92) [5.73/2.37]
+|   |   |   score >= 41.31
+|   |   |   |   AnswerCount < 13.53
+|   |   |   |   |   Question_user_repo < 2262.5
+|   |   |   |   |   |   AnswerCount < 8.87 : Advanced (7/2) [5/1]
+|   |   |   |   |   |   AnswerCount >= 8.87 : Basic (5/1) [2/2]
+|   |   |   |   |   Question_user_repo >= 2262.5
+|   |   |   |   |   |   Question_user_repo < 33157.31
+|   |   |   |   |   |   |   Median < 74.5 : Intermediate (8/3) [4/0]
+|   |   |   |   |   |   |   Median >= 74.5 : Basic (8/1) [3/3]
+|   |   |   |   |   |   Question_user_repo >= 33157.31 : Basic (2/1) [2/1]
+|   |   |   |   AnswerCount >= 13.53
+|   |   |   |   |   Median < 107.03 : Intermediate (2/0) [2/1]
+|   |   |   |   |   Median >= 107.03 : Advanced (6/0) [1/1]
+|   |   Median >= 70537.25 : Basic (64/18) [25/6]
+
+Size of the tree : 129
+
+FilteredClassifier using weka.classifiers.trees.REPTree -M 2 -V 0.001 -N 3 -S -183631181 -L -1 -I 0.0 on data filtered through weka.filters.unsupervised.attribute.Remove -V -R 8,7,3,4,2,10
+
+Filtered Header
+@relation 'new_data-weka.filters.unsupervised.attribute.Remove-R2-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.unsupervised.attribute.Remove-V-R8,7,3,4,2,10'
+
+@attribute Question_user_repo numeric
+@attribute favoritecount numeric
+@attribute ViewCount numeric
+@attribute AnswerCount numeric
+@attribute score numeric
+@attribute 'Majority voting (class)' {Basic,Intermediate,Advanced}
+
+@data
+
+
+Classifier Model
+
+REPTree
+============
+
+ViewCount < 8312.66
+|   score < 12.02
+|   |   favoritecount < 1.01
+|   |   |   score < 6.11
+|   |   |   |   Question_user_repo < 2904.5
+|   |   |   |   |   Question_user_repo < 265.5 : Basic (7.03/0.89) [2.57/1]
+|   |   |   |   |   Question_user_repo >= 265.5 : Intermediate (15.06/8.13) [9.14/4.28]
+|   |   |   |   Question_user_repo >= 2904.5
+|   |   |   |   |   ViewCount < 404.5 : Intermediate (2.01/1) [1/0]
+|   |   |   |   |   ViewCount >= 404.5 : Basic (12.62/0.92) [5.57/4]
+|   |   |   score >= 6.11
+|   |   |   |   ViewCount < 2335.77
+|   |   |   |   |   Question_user_repo < 7120 : Intermediate (46.53/20.55) [18.84/5.28]
+|   |   |   |   |   Question_user_repo >= 7120 : Basic (5.14/0) [1.57/0.57]
+|   |   |   |   ViewCount >= 2335.77 : Basic (28.69/16.7) [19.7/8.28]
+|   |   favoritecount >= 1.01
+|   |   |   ViewCount < 607.46
+|   |   |   |   AnswerCount < 2.07 : Basic (17.04/6.89) [3.15/1.43]
+|   |   |   |   AnswerCount >= 2.07 : Intermediate (25.06/7.29) [10.15/4.15]
+|   |   |   ViewCount >= 607.46
+|   |   |   |   AnswerCount < 4.99
+|   |   |   |   |   AnswerCount < 4.01
+|   |   |   |   |   |   Question_user_repo < 7276.9
+|   |   |   |   |   |   |   score < 8.02
+|   |   |   |   |   |   |   |   ViewCount < 1145.76
+|   |   |   |   |   |   |   |   |   ViewCount < 813.5 : Basic (2.01/0.01) [2.72/1]
+|   |   |   |   |   |   |   |   |   ViewCount >= 813.5 : Intermediate (10.04/3.86) [5/2]
+|   |   |   |   |   |   |   |   ViewCount >= 1145.76
+|   |   |   |   |   |   |   |   |   ViewCount < 2566
+|   |   |   |   |   |   |   |   |   |   favoritecount < 3.7 : Advanced (25.34/6.34) [5.14/3.14]
+|   |   |   |   |   |   |   |   |   |   favoritecount >= 3.7 : Intermediate (6.61/0.3) [1.3/1.15]
+|   |   |   |   |   |   |   |   |   ViewCount >= 2566
+|   |   |   |   |   |   |   |   |   |   Question_user_repo < 3386.28 : Basic (16.91/6.05) [16.29/10.15]
+|   |   |   |   |   |   |   |   |   |   Question_user_repo >= 3386.28
+|   |   |   |   |   |   |   |   |   |   |   ViewCount < 5740.07
+|   |   |   |   |   |   |   |   |   |   |   |   AnswerCount < 2.91 : Intermediate (4.01/2) [2/1]
+|   |   |   |   |   |   |   |   |   |   |   |   AnswerCount >= 2.91 : Basic (5.45/1.73) [1.72/0]
+|   |   |   |   |   |   |   |   |   |   |   ViewCount >= 5740.07 : Advanced (4.44/0.01) [3.72/0]
+|   |   |   |   |   |   |   score >= 8.02
+|   |   |   |   |   |   |   |   AnswerCount < 1.15 : Intermediate (4.43/1) [1/1]
+|   |   |   |   |   |   |   |   AnswerCount >= 1.15
+|   |   |   |   |   |   |   |   |   AnswerCount < 3.98 : Advanced (52.59/9.86) [30.01/7.43]
+|   |   |   |   |   |   |   |   |   AnswerCount >= 3.98
+|   |   |   |   |   |   |   |   |   |   score < 10.72
+|   |   |   |   |   |   |   |   |   |   |   ViewCount < 3166 : Advanced (2/0) [1.72/0.72]
+|   |   |   |   |   |   |   |   |   |   |   ViewCount >= 3166 : Basic (2.72/1) [2/1]
+|   |   |   |   |   |   |   |   |   |   score >= 10.72 : Basic (4/1) [2.72/1]
+|   |   |   |   |   |   Question_user_repo >= 7276.9
+|   |   |   |   |   |   |   Question_user_repo < 44650.68
+|   |   |   |   |   |   |   |   Question_user_repo < 7873.5 : Basic (2.43/0) [0/0]
+|   |   |   |   |   |   |   |   Question_user_repo >= 7873.5
+|   |   |   |   |   |   |   |   |   ViewCount < 3218.8
+|   |   |   |   |   |   |   |   |   |   favoritecount < 2.5 : Intermediate (5.52/1.51) [4.51/2]
+|   |   |   |   |   |   |   |   |   |   favoritecount >= 2.5 : Basic (2.21/0) [2.2/0.2]
+|   |   |   |   |   |   |   |   |   ViewCount >= 3218.8 : Intermediate (12.88/0) [6/2]
+|   |   |   |   |   |   |   Question_user_repo >= 44650.68 : Basic (6.73/2.01) [2/2]
+|   |   |   |   |   AnswerCount >= 4.01
+|   |   |   |   |   |   score < 7.76 : Advanced (14.04/0.04) [4/1]
+|   |   |   |   |   |   score >= 7.76
+|   |   |   |   |   |   |   favoritecount < 1.79 : Intermediate (3/0) [0.39/0]
+|   |   |   |   |   |   |   favoritecount >= 1.79
+|   |   |   |   |   |   |   |   favoritecount < 2.49 : Advanced (5/0) [1.65/0.65]
+|   |   |   |   |   |   |   |   favoritecount >= 2.49 : Intermediate (3/0) [2.39/1]
+|   |   |   |   AnswerCount >= 4.99 : Basic (57.11/30.24) [24.86/14.72]
+|   score >= 12.02
+|   |   Question_user_repo < 1139.06
+|   |   |   ViewCount < 1174.64 : Basic (9/0) [4.02/1.02]
+|   |   |   ViewCount >= 1174.64
+|   |   |   |   favoritecount < 10.14
+|   |   |   |   |   score < 26.06
+|   |   |   |   |   |   ViewCount < 2757.13 : Advanced (8/4) [6/2]
+|   |   |   |   |   |   ViewCount >= 2757.13 : Basic (11/2) [4/3]
+|   |   |   |   |   score >= 26.06 : Advanced (15/3) [8.09/1.09]
+|   |   |   |   favoritecount >= 10.14 : Intermediate (4/0) [0.01/0]
+|   |   Question_user_repo >= 1139.06
+|   |   |   favoritecount < 1.65
+|   |   |   |   AnswerCount < 2.96 : Intermediate (4.04/0.04) [1.12/0.07]
+|   |   |   |   AnswerCount >= 2.96 : Basic (3.18/0.11) [3.12/1.08]
+|   |   |   favoritecount >= 1.65
+|   |   |   |   AnswerCount < 5.88
+|   |   |   |   |   AnswerCount < 3.01
+|   |   |   |   |   |   score < 45.25
+|   |   |   |   |   |   |   Question_user_repo < 61768.5
+|   |   |   |   |   |   |   |   favoritecount < 5.5
+|   |   |   |   |   |   |   |   |   AnswerCount < 1.41 : Intermediate (3/0) [0.4/0]
+|   |   |   |   |   |   |   |   |   AnswerCount >= 1.41 : Advanced (10.39/3) [7.6/3.82]
+|   |   |   |   |   |   |   |   favoritecount >= 5.5
+|   |   |   |   |   |   |   |   |   AnswerCount < 2.88
+|   |   |   |   |   |   |   |   |   |   Question_user_repo < 1604.5 : Advanced (3/0) [2.01/1.01]
+|   |   |   |   |   |   |   |   |   |   Question_user_repo >= 1604.5 : Advanced (10.57/5) [12.76/2.61]
+|   |   |   |   |   |   |   |   |   AnswerCount >= 2.88 : Intermediate (6/0) [3.17/1.57]
+|   |   |   |   |   |   |   Question_user_repo >= 61768.5 : Basic (3/1) [1.01/1.01]
+|   |   |   |   |   |   score >= 45.25 : Advanced (16/0) [2/0]
+|   |   |   |   |   AnswerCount >= 3.01 : Advanced (119.85/15.89) [43.27/10.31]
+|   |   |   |   AnswerCount >= 5.88
+|   |   |   |   |   ViewCount < 1746.65 : Advanced (7.96/3.96) [6.02/1.02]
+|   |   |   |   |   ViewCount >= 1746.65
+|   |   |   |   |   |   favoritecount < 15.75 : Intermediate (10/3) [8.03/1]
+|   |   |   |   |   |   favoritecount >= 15.75 : Advanced (2/0) [4.01/1.01]
+ViewCount >= 8312.66
+|   ViewCount < 36111.62
+|   |   favoritecount < 10
+|   |   |   Question_user_repo < 18718.5
+|   |   |   |   Question_user_repo < 2352.38 : Basic (92.41/36.09) [48.42/11.09]
+|   |   |   |   Question_user_repo >= 2352.38
+|   |   |   |   |   AnswerCount < 2.96
+|   |   |   |   |   |   Question_user_repo < 8707.22
+|   |   |   |   |   |   |   favoritecount < 5.35 : Advanced (9.47/0.47) [9.01/3.01]
+|   |   |   |   |   |   |   favoritecount >= 5.35 : Intermediate (4.21/0) [1/0]
+|   |   |   |   |   |   Question_user_repo >= 8707.22 : Basic (5/3) [1.67/0]
+|   |   |   |   |   AnswerCount >= 2.96
+|   |   |   |   |   |   AnswerCount < 5.19
+|   |   |   |   |   |   |   ViewCount < 11376.91
+|   |   |   |   |   |   |   |   Question_user_repo < 7891.23 : Basic (4/2) [7/4]
+|   |   |   |   |   |   |   |   Question_user_repo >= 7891.23 : Intermediate (4/0) [2/1]
+|   |   |   |   |   |   |   ViewCount >= 11376.91
+|   |   |   |   |   |   |   |   Question_user_repo < 6055.27
+|   |   |   |   |   |   |   |   |   Question_user_repo < 5693.5
+|   |   |   |   |   |   |   |   |   |   favoritecount < 8.5 : Basic (4/0) [7/2]
+|   |   |   |   |   |   |   |   |   |   favoritecount >= 8.5 : Intermediate (4/2) [0/0]
+|   |   |   |   |   |   |   |   |   Question_user_repo >= 5693.5 : Intermediate (2/0) [0/0]
+|   |   |   |   |   |   |   |   Question_user_repo >= 6055.27 : Basic (5/0) [12/7]
+|   |   |   |   |   |   AnswerCount >= 5.19 : Intermediate (23.68/8.33) [8.69/3.67]
+|   |   |   Question_user_repo >= 18718.5 : Basic (16.68/0.68) [5.35/0.68]
+|   |   favoritecount >= 10
+|   |   |   Question_user_repo < 1079.76
+|   |   |   |   ViewCount < 28804.04
+|   |   |   |   |   score < 18.81 : Basic (3.7/1.36) [1.34/0]
+|   |   |   |   |   score >= 18.81 : Advanced (19/3) [7.02/4.02]
+|   |   |   |   ViewCount >= 28804.04 : Intermediate (6.34/0.33) [2.01/2]
+|   |   |   Question_user_repo >= 1079.76
+|   |   |   |   score < 13.51 : Basic (7.07/3.73) [2.67/0.33]
+|   |   |   |   score >= 13.51
+|   |   |   |   |   favoritecount < 35.62
+|   |   |   |   |   |   Question_user_repo < 1770.6 : Intermediate (11/0) [6.01/3]
+|   |   |   |   |   |   Question_user_repo >= 1770.6
+|   |   |   |   |   |   |   score < 24.58 : Intermediate (7.84/0.28) [6/0]
+|   |   |   |   |   |   |   score >= 24.58
+|   |   |   |   |   |   |   |   AnswerCount < 2.93 : Intermediate (2.28/0) [0/0]
+|   |   |   |   |   |   |   |   AnswerCount >= 2.93
+|   |   |   |   |   |   |   |   |   Question_user_repo < 2621.83 : Basic (3/0) [0.29/0.29]
+|   |   |   |   |   |   |   |   |   Question_user_repo >= 2621.83
+|   |   |   |   |   |   |   |   |   |   score < 32.61 : Basic (3/0) [4/2]
+|   |   |   |   |   |   |   |   |   |   score >= 32.61
+|   |   |   |   |   |   |   |   |   |   |   score < 42.5 : Intermediate (3.28/0) [3.31/1]
+|   |   |   |   |   |   |   |   |   |   |   score >= 42.5
+|   |   |   |   |   |   |   |   |   |   |   |   Question_user_repo < 7778.47 : Intermediate (7/2) [4.28/2]
+|   |   |   |   |   |   |   |   |   |   |   |   Question_user_repo >= 7778.47 : Basic (6/0) [3/0]
+|   |   |   |   |   favoritecount >= 35.62
+|   |   |   |   |   |   AnswerCount < 6.41 : Intermediate (4.21/1.05) [0.17/0]
+|   |   |   |   |   |   AnswerCount >= 6.41 : Advanced (4.05/1.05) [5/2]
+|   ViewCount >= 36111.62
+|   |   AnswerCount < 11.2
+|   |   |   ViewCount < 92213
+|   |   |   |   ViewCount < 88711
+|   |   |   |   |   AnswerCount < 7.18
+|   |   |   |   |   |   AnswerCount < 4.96
+|   |   |   |   |   |   |   AnswerCount < 4.2 : Basic (17.02/1.02) [6.02/2.02]
+|   |   |   |   |   |   |   AnswerCount >= 4.2 : Intermediate (2/0) [0/0]
+|   |   |   |   |   |   AnswerCount >= 4.96 : Basic (27.03/0.03) [13.03/3.03]
+|   |   |   |   |   AnswerCount >= 7.18 : Intermediate (10.01/5) [12.01/4]
+|   |   |   |   ViewCount >= 88711 : Intermediate (2/0) [1/1]
+|   |   |   ViewCount >= 92213 : Basic (26.03/0.03) [11.03/1.03]
+|   |   AnswerCount >= 11.2 : Basic (29.03/14.03) [15.03/4.03]
+
+Size of the tree : 165
+
+FilteredClassifier using weka.classifiers.trees.REPTree -M 2 -V 0.001 -N 3 -S 1277727140 -L -1 -I 0.0 on data filtered through weka.filters.unsupervised.attribute.Remove -V -R 4,2,9,7,5,10
+
+Filtered Header
+@relation 'new_data-weka.filters.unsupervised.attribute.Remove-R2-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.unsupervised.attribute.Remove-V-R4,2,9,7,5,10'
+
+@attribute AnswerCount numeric
+@attribute score numeric
+@attribute QATimeGap numeric
+@attribute favoritecount numeric
+@attribute CommentCount numeric
+@attribute 'Majority voting (class)' {Basic,Intermediate,Advanced}
+
+@data
+
+
+Classifier Model
+
+REPTree
+============
+
+QATimeGap < 7.03
+|   QATimeGap < 3.04
+|   |   CommentCount < 0.03 : Basic (72.14/13.14) [34/8]
+|   |   CommentCount >= 0.03
+|   |   |   CommentCount < 0.87 : Intermediate (7.01/0) [1/0]
+|   |   |   CommentCount >= 0.87
+|   |   |   |   CommentCount < 1.06 : Basic (36.07/5.07) [24/6]
+|   |   |   |   CommentCount >= 1.06
+|   |   |   |   |   CommentCount < 1.97 : Intermediate (5.01/0) [2/0]
+|   |   |   |   |   CommentCount >= 1.97 : Basic (84.16/29.16) [49/14]
+|   QATimeGap >= 3.04
+|   |   QATimeGap < 4
+|   |   |   CommentCount < 3.77 : Intermediate (13.03/3) [4/2]
+|   |   |   CommentCount >= 3.77 : Advanced (7.01/0.01) [6/2]
+|   |   QATimeGap >= 4
+|   |   |   favoritecount < 1.79
+|   |   |   |   favoritecount < 1.07 : Basic (33.62/16.34) [25.71/8.43]
+|   |   |   |   favoritecount >= 1.07 : Intermediate (5.6/0.38) [1.28/0.24]
+|   |   |   favoritecount >= 1.79
+|   |   |   |   QATimeGap < 4.02 : Basic (47.77/11.76) [22.67/2.83]
+|   |   |   |   QATimeGap >= 4.02
+|   |   |   |   |   QATimeGap < 4.94
+|   |   |   |   |   |   score < 11.39 : Intermediate (2.85/0) [2/0]
+|   |   |   |   |   |   score >= 11.39 : Advanced (16.02/4.02) [6/2]
+|   |   |   |   |   QATimeGap >= 4.94
+|   |   |   |   |   |   QATimeGap < 6
+|   |   |   |   |   |   |   QATimeGap < 5 : Basic (39.75/15.75) [27/11.83]
+|   |   |   |   |   |   |   QATimeGap >= 5 : Intermediate (19.54/9) [6/1]
+|   |   |   |   |   |   QATimeGap >= 6
+|   |   |   |   |   |   |   AnswerCount < 5.13
+|   |   |   |   |   |   |   |   score < 9.33 : Basic (16.05/1.04) [6.67/3.83]
+|   |   |   |   |   |   |   |   score >= 9.33
+|   |   |   |   |   |   |   |   |   QATimeGap < 6.04 : Basic (12.02/3.02) [2.83/0]
+|   |   |   |   |   |   |   |   |   QATimeGap >= 6.04
+|   |   |   |   |   |   |   |   |   |   QATimeGap < 6.96 : Intermediate (7.01/3) [2/1]
+|   |   |   |   |   |   |   |   |   |   QATimeGap >= 6.96 : Basic (6.68/2.01) [6.83/2]
+|   |   |   |   |   |   |   AnswerCount >= 5.13
+|   |   |   |   |   |   |   |   CommentCount < 1.05
+|   |   |   |   |   |   |   |   |   score < 10.5 : Intermediate (3.51/1.67) [1/0]
+|   |   |   |   |   |   |   |   |   score >= 10.5 : Basic (9.01/0.01) [0/0]
+|   |   |   |   |   |   |   |   CommentCount >= 1.05
+|   |   |   |   |   |   |   |   |   CommentCount < 4.5
+|   |   |   |   |   |   |   |   |   |   score < 20
+|   |   |   |   |   |   |   |   |   |   |   QATimeGap < 6.03 : Basic (3.01/0.01) [2/0]
+|   |   |   |   |   |   |   |   |   |   |   QATimeGap >= 6.03 : Intermediate (3.01/1) [2/1]
+|   |   |   |   |   |   |   |   |   |   score >= 20 : Intermediate (7.01/0) [1/0]
+|   |   |   |   |   |   |   |   |   CommentCount >= 4.5 : Basic (4.01/0.01) [2/2]
+QATimeGap >= 7.03
+|   AnswerCount < 5.99
+|   |   favoritecount < 1.01
+|   |   |   QATimeGap < 13.5
+|   |   |   |   QATimeGap < 7.77 : Intermediate (3.01/0) [0/0]
+|   |   |   |   QATimeGap >= 7.77
+|   |   |   |   |   score < 7.5
+|   |   |   |   |   |   AnswerCount < 2.5 : Intermediate (5.86/1.49) [3.37/1.24]
+|   |   |   |   |   |   AnswerCount >= 2.5
+|   |   |   |   |   |   |   CommentCount < 2.73 : Basic (5.13/1.13) [0.24/0.12]
+|   |   |   |   |   |   |   CommentCount >= 2.73
+|   |   |   |   |   |   |   |   QATimeGap < 9.55 : Intermediate (2.12/0) [3.12/0]
+|   |   |   |   |   |   |   |   QATimeGap >= 9.55
+|   |   |   |   |   |   |   |   |   score < 6.44 : Basic (2.01/0.01) [0.12/0]
+|   |   |   |   |   |   |   |   |   score >= 6.44 : Intermediate (4/1) [0/0]
+|   |   |   |   |   score >= 7.5 : Basic (6.76/1.15) [6.24/2.12]
+|   |   |   QATimeGap >= 13.5
+|   |   |   |   CommentCount < 0.26 : Basic (4.62/0.25) [3.49/3.37]
+|   |   |   |   CommentCount >= 0.26
+|   |   |   |   |   AnswerCount < 3.36
+|   |   |   |   |   |   AnswerCount < 1.13 : Basic (6.62/3.13) [2.24/0.24]
+|   |   |   |   |   |   AnswerCount >= 1.13 : Intermediate (15.59/6.59) [8.98/3.49]
+|   |   |   |   |   AnswerCount >= 3.36
+|   |   |   |   |   |   CommentCount < 4.19 : Advanced (3.74/1.5) [4.61/0.37]
+|   |   |   |   |   |   CommentCount >= 4.19 : Basic (3.01/0.01) [1.24/1.24]
+|   |   favoritecount >= 1.01
+|   |   |   AnswerCount < 3.01
+|   |   |   |   AnswerCount < 2.95
+|   |   |   |   |   AnswerCount < 2.08
+|   |   |   |   |   |   QATimeGap < 131.05
+|   |   |   |   |   |   |   AnswerCount < 1.99 : Advanced (36.85/20.97) [14/4]
+|   |   |   |   |   |   |   AnswerCount >= 1.99 : Basic (33.72/14.58) [12.51/5.88]
+|   |   |   |   |   |   QATimeGap >= 131.05
+|   |   |   |   |   |   |   score < 10.21
+|   |   |   |   |   |   |   |   QATimeGap < 7019.15 : Intermediate (13.54/2) [3/1]
+|   |   |   |   |   |   |   |   QATimeGap >= 7019.15 : Advanced (6.53/1.01) [6.63/0]
+|   |   |   |   |   |   |   score >= 10.21 : Advanced (22.04/3.04) [15.76/2.76]
+|   |   |   |   |   AnswerCount >= 2.08 : Advanced (43.99/9.84) [26.51/9.88]
+|   |   |   |   AnswerCount >= 2.95
+|   |   |   |   |   score < 7.73 : Intermediate (5.04/0) [6.76/4.76]
+|   |   |   |   |   score >= 7.73
+|   |   |   |   |   |   CommentCount < 0.41
+|   |   |   |   |   |   |   favoritecount < 5.5 : Basic (7.52/2.01) [4.51/2.51]
+|   |   |   |   |   |   |   favoritecount >= 5.5 : Intermediate (5.37/2.37) [0.37/0]
+|   |   |   |   |   |   CommentCount >= 0.41 : Intermediate (20.66/8.76) [9.76/1]
+|   |   |   AnswerCount >= 3.01
+|   |   |   |   AnswerCount < 3.99 : Advanced (77.78/12.03) [34.39/6.63]
+|   |   |   |   AnswerCount >= 3.99
+|   |   |   |   |   AnswerCount < 4.01
+|   |   |   |   |   |   QATimeGap < 22.5
+|   |   |   |   |   |   |   CommentCount < 2.02
+|   |   |   |   |   |   |   |   QATimeGap < 8.39 : Basic (5.89/1.89) [1/1]
+|   |   |   |   |   |   |   |   QATimeGap >= 8.39
+|   |   |   |   |   |   |   |   |   favoritecount < 15.25 : Intermediate (12.68/4) [9.32/4.66]
+|   |   |   |   |   |   |   |   |   favoritecount >= 15.25 : Advanced (4.23/1.23) [1.44/0.44]
+|   |   |   |   |   |   |   CommentCount >= 2.02 : Advanced (12.02/4.02) [6.88/4.88]
+|   |   |   |   |   |   QATimeGap >= 22.5
+|   |   |   |   |   |   |   QATimeGap < 53.5 : Basic (9.9/2.02) [4.88/4.88]
+|   |   |   |   |   |   |   QATimeGap >= 53.5 : Intermediate (4.01/1) [1/0]
+|   |   |   |   |   AnswerCount >= 4.01
+|   |   |   |   |   |   score < 67.1
+|   |   |   |   |   |   |   score < 17.05
+|   |   |   |   |   |   |   |   QATimeGap < 7.47 : Advanced (7.02/0.02) [5/0]
+|   |   |   |   |   |   |   |   QATimeGap >= 7.47
+|   |   |   |   |   |   |   |   |   favoritecount < 2.78
+|   |   |   |   |   |   |   |   |   |   QATimeGap < 58.77
+|   |   |   |   |   |   |   |   |   |   |   favoritecount < 1.89 : Intermediate (3.33/0) [0.22/0]
+|   |   |   |   |   |   |   |   |   |   |   favoritecount >= 1.89 : Advanced (7.78/1.78) [4.51/1.51]
+|   |   |   |   |   |   |   |   |   |   QATimeGap >= 58.77 : Advanced (9.38/0.38) [2/0]
+|   |   |   |   |   |   |   |   |   favoritecount >= 2.78
+|   |   |   |   |   |   |   |   |   |   CommentCount < 2.11 : Advanced (15.06/8.06) [8/2]
+|   |   |   |   |   |   |   |   |   |   CommentCount >= 2.11 : Intermediate (14.06/3) [6.03/3]
+|   |   |   |   |   |   |   score >= 17.05
+|   |   |   |   |   |   |   |   CommentCount < 2.07
+|   |   |   |   |   |   |   |   |   favoritecount < 9.05 : Advanced (12.02/5.02) [6/1]
+|   |   |   |   |   |   |   |   |   favoritecount >= 9.05
+|   |   |   |   |   |   |   |   |   |   favoritecount < 14.11 : Advanced (6.01/0.01) [5/3]
+|   |   |   |   |   |   |   |   |   |   favoritecount >= 14.11
+|   |   |   |   |   |   |   |   |   |   |   CommentCount < 0.5 : Advanced (5.01/0.01) [0/0]
+|   |   |   |   |   |   |   |   |   |   |   CommentCount >= 0.5 : Intermediate (3.01/0) [1/0]
+|   |   |   |   |   |   |   |   CommentCount >= 2.07 : Advanced (40.07/1.07) [12.88/1.88]
+|   |   |   |   |   |   score >= 67.1
+|   |   |   |   |   |   |   favoritecount < 23.96 : Intermediate (2/0) [1/0]
+|   |   |   |   |   |   |   favoritecount >= 23.96 : Basic (3/0) [2/1]
+|   AnswerCount >= 5.99
+|   |   QATimeGap < 16.5 : Basic (30.06/16.06) [25/12]
+|   |   QATimeGap >= 16.5
+|   |   |   favoritecount < 12.39 : Intermediate (20.04/3) [6/2]
+|   |   |   favoritecount >= 12.39 : Basic (10.02/4.02) [3/1]
+
+Size of the tree : 137
+
+FilteredClassifier using weka.classifiers.trees.REPTree -M 2 -V 0.001 -N 3 -S 2073743188 -L -1 -I 0.0 on data filtered through weka.filters.unsupervised.attribute.Remove -V -R 6,8,3,5,4,10
+
+Filtered Header
+@relation 'new_data-weka.filters.unsupervised.attribute.Remove-R2-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.unsupervised.attribute.Remove-V-R6,8,3,5,4,10'
+
+@attribute ques_size numeric
+@attribute Question_user_repo numeric
+@attribute ViewCount numeric
+@attribute CommentCount numeric
+@attribute AnswerCount numeric
+@attribute 'Majority voting (class)' {Basic,Intermediate,Advanced}
+
+@data
+
+
+Classifier Model
+
+REPTree
+============
+
+ViewCount < 8312.66
+|   ViewCount < 610.46
+|   |   ques_size < 374.5 : Basic (5.01/0.01) [1/1]
+|   |   ques_size >= 374.5
+|   |   |   AnswerCount < 2.07
+|   |   |   |   ques_size < 1990.5
+|   |   |   |   |   Question_user_repo < 5439
+|   |   |   |   |   |   ques_size < 1718
+|   |   |   |   |   |   |   ques_size < 834.09 : Basic (12.02/3.02) [3/1]
+|   |   |   |   |   |   |   ques_size >= 834.09 : Intermediate (8.02/1) [5/1]
+|   |   |   |   |   |   ques_size >= 1718 : Basic (3.01/0.01) [1/0]
+|   |   |   |   |   Question_user_repo >= 5439 : Basic (4.01/1.01) [1/1]
+|   |   |   |   ques_size >= 1990.5 : Intermediate (8.02/1) [4/4]
+|   |   |   AnswerCount >= 2.07
+|   |   |   |   ViewCount < 551
+|   |   |   |   |   ViewCount < 298.61 : Intermediate (14.03/2) [13/4]
+|   |   |   |   |   ViewCount >= 298.61
+|   |   |   |   |   |   AnswerCount < 4.98 : Intermediate (12.02/3) [7/3]
+|   |   |   |   |   |   AnswerCount >= 4.98 : Basic (5.01/1.01) [3/1]
+|   |   |   |   ViewCount >= 551 : Intermediate (9.02/0) [5/3]
+|   ViewCount >= 610.46
+|   |   ques_size < 504.16
+|   |   |   CommentCount < 1.05
+|   |   |   |   ViewCount < 8009.41 : Basic (44.09/9.09) [20/6]
+|   |   |   |   ViewCount >= 8009.41 : Advanced (5.01/1.01) [1/0]
+|   |   |   CommentCount >= 1.05
+|   |   |   |   ViewCount < 7397.5
+|   |   |   |   |   CommentCount < 5.68
+|   |   |   |   |   |   ques_size < 310 : Basic (10.02/2.02) [4/1]
+|   |   |   |   |   |   ques_size >= 310 : Advanced (24.05/7.05) [19/10]
+|   |   |   |   |   CommentCount >= 5.68 : Intermediate (3.01/1) [1/1]
+|   |   |   |   ViewCount >= 7397.5 : Intermediate (8.02/2) [0/0]
+|   |   ques_size >= 504.16
+|   |   |   AnswerCount < 5.99
+|   |   |   |   ques_size < 2126.18
+|   |   |   |   |   ViewCount < 1381.86
+|   |   |   |   |   |   CommentCount < 2.02 : Basic (16.03/6.03) [12/4]
+|   |   |   |   |   |   CommentCount >= 2.02
+|   |   |   |   |   |   |   Question_user_repo < 9395.99
+|   |   |   |   |   |   |   |   Question_user_repo < 589.93 : Intermediate (6.01/0) [3/1]
+|   |   |   |   |   |   |   |   Question_user_repo >= 589.93
+|   |   |   |   |   |   |   |   |   Question_user_repo < 1604.5 : Advanced (4.01/1.01) [3/0]
+|   |   |   |   |   |   |   |   |   Question_user_repo >= 1604.5 : Intermediate (17.03/6) [7/1]
+|   |   |   |   |   |   |   Question_user_repo >= 9395.99 : Basic (3.01/0.01) [0/0]
+|   |   |   |   |   ViewCount >= 1381.86
+|   |   |   |   |   |   AnswerCount < 3.01
+|   |   |   |   |   |   |   AnswerCount < 2.96
+|   |   |   |   |   |   |   |   ViewCount < 2134.5
+|   |   |   |   |   |   |   |   |   Question_user_repo < 2077.5 : Advanced (25.05/0.05) [14/2]
+|   |   |   |   |   |   |   |   |   Question_user_repo >= 2077.5 : Intermediate (3.01/0) [3/1]
+|   |   |   |   |   |   |   |   ViewCount >= 2134.5
+|   |   |   |   |   |   |   |   |   AnswerCount < 2.06
+|   |   |   |   |   |   |   |   |   |   Question_user_repo < 1895 : Basic (10.02/2.02) [1/0]
+|   |   |   |   |   |   |   |   |   |   Question_user_repo >= 1895
+|   |   |   |   |   |   |   |   |   |   |   ques_size < 1547.5
+|   |   |   |   |   |   |   |   |   |   |   |   ViewCount < 6820.94 : Intermediate (9.02/2) [10/2]
+|   |   |   |   |   |   |   |   |   |   |   |   ViewCount >= 6820.94 : Basic (3.01/0.01) [1/0]
+|   |   |   |   |   |   |   |   |   |   |   ques_size >= 1547.5 : Intermediate (7.01/3) [3/1]
+|   |   |   |   |   |   |   |   |   AnswerCount >= 2.06 : Advanced (16.03/2.03) [12/2]
+|   |   |   |   |   |   |   AnswerCount >= 2.96
+|   |   |   |   |   |   |   |   ViewCount < 5617.5 : Basic (27.05/12.05) [17/9]
+|   |   |   |   |   |   |   |   ViewCount >= 5617.5 : Intermediate (7.01/1) [1/1]
+|   |   |   |   |   |   AnswerCount >= 3.01
+|   |   |   |   |   |   |   Question_user_repo < 234.24 : Basic (14.03/6.03) [3/1]
+|   |   |   |   |   |   |   Question_user_repo >= 234.24
+|   |   |   |   |   |   |   |   AnswerCount < 3.98 : Advanced (40.08/4.08) [27/5]
+|   |   |   |   |   |   |   |   AnswerCount >= 3.98
+|   |   |   |   |   |   |   |   |   AnswerCount < 4.01
+|   |   |   |   |   |   |   |   |   |   ViewCount < 2623.5 : Advanced (10.02/1.02) [5/4]
+|   |   |   |   |   |   |   |   |   |   ViewCount >= 2623.5
+|   |   |   |   |   |   |   |   |   |   |   CommentCount < 1.5
+|   |   |   |   |   |   |   |   |   |   |   |   Question_user_repo < 789 : Advanced (2/0) [1/1]
+|   |   |   |   |   |   |   |   |   |   |   |   Question_user_repo >= 789
+|   |   |   |   |   |   |   |   |   |   |   |   |   Question_user_repo < 3571.5 : Basic (2/0) [0/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   Question_user_repo >= 3571.5 : Intermediate (4.01/2) [5/2]
+|   |   |   |   |   |   |   |   |   |   |   CommentCount >= 1.5 : Basic (6.01/0.01) [6/3]
+|   |   |   |   |   |   |   |   |   AnswerCount >= 4.01 : Advanced (71.14/18.14) [40/6]
+|   |   |   |   ques_size >= 2126.18
+|   |   |   |   |   ViewCount < 4872.26 : Advanced (76.15/18.15) [33/4]
+|   |   |   |   |   ViewCount >= 4872.26
+|   |   |   |   |   |   ques_size < 2597.04 : Advanced (8.02/1.02) [7/3]
+|   |   |   |   |   |   ques_size >= 2597.04
+|   |   |   |   |   |   |   ques_size < 8375.92
+|   |   |   |   |   |   |   |   Question_user_repo < 4969.5 : Intermediate (6.01/0) [6/3]
+|   |   |   |   |   |   |   |   Question_user_repo >= 4969.5
+|   |   |   |   |   |   |   |   |   Question_user_repo < 20964.32 : Advanced (7.01/3.01) [4/1]
+|   |   |   |   |   |   |   |   |   Question_user_repo >= 20964.32 : Intermediate (5.01/0) [2/0]
+|   |   |   |   |   |   |   ques_size >= 8375.92 : Basic (2/1) [0/0]
+|   |   |   AnswerCount >= 5.99
+|   |   |   |   Question_user_repo < 1534
+|   |   |   |   |   AnswerCount < 6.5 : Intermediate (3.01/1) [2/1]
+|   |   |   |   |   AnswerCount >= 6.5
+|   |   |   |   |   |   ques_size < 1165.5 : Basic (8.02/0.02) [3/0]
+|   |   |   |   |   |   ques_size >= 1165.5 : Intermediate (2/1) [1/0]
+|   |   |   |   Question_user_repo >= 1534
+|   |   |   |   |   ques_size < 623.03 : Advanced (5.01/1.01) [2/1]
+|   |   |   |   |   ques_size >= 623.03
+|   |   |   |   |   |   CommentCount < 1 : Basic (13.03/5.03) [5/3]
+|   |   |   |   |   |   CommentCount >= 1
+|   |   |   |   |   |   |   Question_user_repo < 7379.98
+|   |   |   |   |   |   |   |   ques_size < 988 : Advanced (4.01/2.01) [1/0]
+|   |   |   |   |   |   |   |   ques_size >= 988 : Intermediate (9.02/4) [2/1]
+|   |   |   |   |   |   |   Question_user_repo >= 7379.98 : Intermediate (10.02/1) [4/3]
+ViewCount >= 8312.66
+|   ViewCount < 59609.5
+|   |   CommentCount < 0.02 : Basic (83.16/23.16) [38/12]
+|   |   CommentCount >= 0.02
+|   |   |   CommentCount < 0.92
+|   |   |   |   ViewCount < 17756.06
+|   |   |   |   |   ques_size < 500.4 : Intermediate (2/0) [2/0]
+|   |   |   |   |   ques_size >= 500.4 : Advanced (13.03/0.03) [5/1]
+|   |   |   |   ViewCount >= 17756.06 : Intermediate (6.01/0) [2/0]
+|   |   |   CommentCount >= 0.92
+|   |   |   |   Question_user_repo < 422.84 : Basic (29.06/5.06) [17/3]
+|   |   |   |   Question_user_repo >= 422.84
+|   |   |   |   |   Question_user_repo < 2274.02
+|   |   |   |   |   |   AnswerCount < 3.58
+|   |   |   |   |   |   |   ques_size < 941
+|   |   |   |   |   |   |   |   CommentCount < 3.5 : Basic (8.02/1.02) [5/1]
+|   |   |   |   |   |   |   |   CommentCount >= 3.5 : Intermediate (2/0) [1/0]
+|   |   |   |   |   |   |   ques_size >= 941 : Intermediate (8.02/0) [5/3]
+|   |   |   |   |   |   AnswerCount >= 3.58
+|   |   |   |   |   |   |   CommentCount < 4.3
+|   |   |   |   |   |   |   |   AnswerCount < 9.17
+|   |   |   |   |   |   |   |   |   CommentCount < 3.08
+|   |   |   |   |   |   |   |   |   |   Question_user_repo < 1759.41
+|   |   |   |   |   |   |   |   |   |   |   ViewCount < 35557
+|   |   |   |   |   |   |   |   |   |   |   |   AnswerCount < 6.88
+|   |   |   |   |   |   |   |   |   |   |   |   |   CommentCount < 1.02 : Basic (4.01/1.01) [4/2]
+|   |   |   |   |   |   |   |   |   |   |   |   |   CommentCount >= 1.02
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Question_user_repo < 644.21 : Basic (2/0) [1/1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Question_user_repo >= 644.21
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ques_size < 334.73 : Advanced (4.01/0.01) [1/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ques_size >= 334.73
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AnswerCount < 4.99
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Question_user_repo < 1000.36 : Advanced (4.01/0.01) [2/1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Question_user_repo >= 1000.36 : Intermediate (3.01/1) [1/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AnswerCount >= 4.99 : Intermediate (3.01/1) [4/2]
+|   |   |   |   |   |   |   |   |   |   |   |   AnswerCount >= 6.88 : Intermediate (4.01/1) [4/2]
+|   |   |   |   |   |   |   |   |   |   |   ViewCount >= 35557 : Basic (5.01/0.01) [0/0]
+|   |   |   |   |   |   |   |   |   |   Question_user_repo >= 1759.41 : Basic (5.01/0.01) [1/0]
+|   |   |   |   |   |   |   |   |   CommentCount >= 3.08
+|   |   |   |   |   |   |   |   |   |   CommentCount < 3.98 : Advanced (10.02/0.02) [1/0]
+|   |   |   |   |   |   |   |   |   |   CommentCount >= 3.98 : Basic (4.01/1.01) [1/0]
+|   |   |   |   |   |   |   |   AnswerCount >= 9.17 : Intermediate (8.02/2) [3/1]
+|   |   |   |   |   |   |   CommentCount >= 4.3
+|   |   |   |   |   |   |   |   Question_user_repo < 1066.51 : Intermediate (4.01/0) [1/0]
+|   |   |   |   |   |   |   |   Question_user_repo >= 1066.51 : Basic (4.01/1.01) [1/0]
+|   |   |   |   |   Question_user_repo >= 2274.02
+|   |   |   |   |   |   AnswerCount < 13.4
+|   |   |   |   |   |   |   AnswerCount < 3.97
+|   |   |   |   |   |   |   |   Question_user_repo < 4905.27 : Intermediate (7.01/0) [3/2]
+|   |   |   |   |   |   |   |   Question_user_repo >= 4905.27
+|   |   |   |   |   |   |   |   |   AnswerCount < 3.47
+|   |   |   |   |   |   |   |   |   |   ViewCount < 13684.29 : Basic (7.01/2.01) [4/1]
+|   |   |   |   |   |   |   |   |   |   ViewCount >= 13684.29 : Intermediate (9.02/3) [4/3]
+|   |   |   |   |   |   |   |   |   AnswerCount >= 3.47 : Advanced (3.01/0.01) [0/0]
+|   |   |   |   |   |   |   AnswerCount >= 3.97
+|   |   |   |   |   |   |   |   CommentCount < 2.99 : Intermediate (35.07/13) [18/9]
+|   |   |   |   |   |   |   |   CommentCount >= 2.99
+|   |   |   |   |   |   |   |   |   Question_user_repo < 8997.88
+|   |   |   |   |   |   |   |   |   |   CommentCount < 3.19 : Basic (7.01/0.01) [1/1]
+|   |   |   |   |   |   |   |   |   |   CommentCount >= 3.19
+|   |   |   |   |   |   |   |   |   |   |   CommentCount < 3.88 : Intermediate (3.01/0) [2/0]
+|   |   |   |   |   |   |   |   |   |   |   CommentCount >= 3.88
+|   |   |   |   |   |   |   |   |   |   |   |   ViewCount < 17756.5 : Intermediate (9.02/2) [2/0]
+|   |   |   |   |   |   |   |   |   |   |   |   ViewCount >= 17756.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   Question_user_repo < 5386.97 : Basic (6.01/1.01) [1/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   Question_user_repo >= 5386.97 : Intermediate (2/0) [1/0]
+|   |   |   |   |   |   |   |   |   Question_user_repo >= 8997.88 : Basic (18.03/2.03) [7/3]
+|   |   |   |   |   |   AnswerCount >= 13.4 : Intermediate (10.02/3) [2/1]
+|   ViewCount >= 59609.5
+|   |   ques_size < 591.02 : Basic (40.08/0.08) [24/4]
+|   |   ques_size >= 591.02
+|   |   |   ViewCount < 148042.5
+|   |   |   |   Question_user_repo < 7398 : Basic (13.03/3.03) [8/3]
+|   |   |   |   Question_user_repo >= 7398 : Intermediate (4.01/0) [1/0]
+|   |   |   ViewCount >= 148042.5 : Basic (9.02/0.02) [5/0]
+
+Size of the tree : 179
+
+FilteredClassifier using weka.classifiers.trees.REPTree -M 2 -V 0.001 -N 3 -S 125176516 -L -1 -I 0.0 on data filtered through weka.filters.unsupervised.attribute.Remove -V -R 4,5,8,7,9,10
+
+Filtered Header
+@relation 'new_data-weka.filters.unsupervised.attribute.Remove-R2-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.unsupervised.attribute.Remove-V-R4,5,8,7,9,10'
+
+@attribute AnswerCount numeric
+@attribute CommentCount numeric
+@attribute Question_user_repo numeric
+@attribute favoritecount numeric
+@attribute QATimeGap numeric
+@attribute 'Majority voting (class)' {Basic,Intermediate,Advanced}
+
+@data
+
+
+Classifier Model
+
+REPTree
+============
+
+QATimeGap < 7.03
+|   QATimeGap < 3.04
+|   |   Question_user_repo < 849.27
+|   |   |   Question_user_repo < 93
+|   |   |   |   Question_user_repo < 62.5 : Basic (3/1) [2/0]
+|   |   |   |   Question_user_repo >= 62.5 : Intermediate (3/0) [0/0]
+|   |   |   Question_user_repo >= 93 : Basic (56.05/3.05) [22.05/5.05]
+|   |   Question_user_repo >= 849.27
+|   |   |   QATimeGap < 2.01
+|   |   |   |   favoritecount < 12.5 : Basic (49.88/17.33) [28.24/11.69]
+|   |   |   |   favoritecount >= 12.5
+|   |   |   |   |   AnswerCount < 12.5 : Basic (24.19/0.75) [7.83/0.38]
+|   |   |   |   |   AnswerCount >= 12.5 : Intermediate (4/2) [1/0]
+|   |   |   QATimeGap >= 2.01
+|   |   |   |   QATimeGap < 2.99
+|   |   |   |   |   CommentCount < 0.03 : Advanced (2/0) [2/0]
+|   |   |   |   |   CommentCount >= 0.03 : Intermediate (14.01/0) [5.01/1]
+|   |   |   |   QATimeGap >= 2.99
+|   |   |   |   |   favoritecount < 20.5
+|   |   |   |   |   |   AnswerCount < 5.5
+|   |   |   |   |   |   |   favoritecount < 3.5
+|   |   |   |   |   |   |   |   Question_user_repo < 5718.5
+|   |   |   |   |   |   |   |   |   Question_user_repo < 4372.5 : Basic (9.98/0.01) [5.49/0.01]
+|   |   |   |   |   |   |   |   |   Question_user_repo >= 4372.5 : Basic (2.49/0.49) [1/0]
+|   |   |   |   |   |   |   |   Question_user_repo >= 5718.5 : Basic (5.97/1.01) [2.97/0.01]
+|   |   |   |   |   |   |   favoritecount >= 3.5
+|   |   |   |   |   |   |   |   Question_user_repo < 22104.5
+|   |   |   |   |   |   |   |   |   Question_user_repo < 9326
+|   |   |   |   |   |   |   |   |   |   CommentCount < 1.5 : Basic (6.19/0.4) [6.4/1.01]
+|   |   |   |   |   |   |   |   |   |   CommentCount >= 1.5
+|   |   |   |   |   |   |   |   |   |   |   AnswerCount < 4.5 : Basic (2/0) [1.4/0]
+|   |   |   |   |   |   |   |   |   |   |   AnswerCount >= 4.5 : Intermediate (2/0) [1/0]
+|   |   |   |   |   |   |   |   |   Question_user_repo >= 9326 : Intermediate (2/0) [1/1]
+|   |   |   |   |   |   |   |   Question_user_repo >= 22104.5 : Basic (2.79/0) [0.4/0]
+|   |   |   |   |   |   AnswerCount >= 5.5 : Basic (14.89/6.01) [9.89/1.01]
+|   |   |   |   |   favoritecount >= 20.5 : Basic (6.74/3.13) [5.5/4.01]
+|   QATimeGap >= 3.04
+|   |   QATimeGap < 3.97
+|   |   |   CommentCount < 1.32 : Intermediate (7.01/0) [2.01/2]
+|   |   |   CommentCount >= 1.32
+|   |   |   |   Question_user_repo < 692.87 : Intermediate (3/0) [0/0]
+|   |   |   |   Question_user_repo >= 692.87
+|   |   |   |   |   AnswerCount < 5.33 : Intermediate (5/2) [0/0]
+|   |   |   |   |   AnswerCount >= 5.33 : Advanced (8.01/0.01) [4.01/0.01]
+|   |   QATimeGap >= 3.97
+|   |   |   Question_user_repo < 663.5
+|   |   |   |   Question_user_repo < 367.5
+|   |   |   |   |   favoritecount < 1.5
+|   |   |   |   |   |   QATimeGap < 5.5
+|   |   |   |   |   |   |   AnswerCount < 5 : Basic (6.33/1.45) [1.45/1.45]
+|   |   |   |   |   |   |   AnswerCount >= 5 : Intermediate (2.44/0) [1.44/0.44]
+|   |   |   |   |   |   QATimeGap >= 5.5 : Basic (9.33/1.01) [1.01/1.01]
+|   |   |   |   |   favoritecount >= 1.5 : Basic (22.93/3.14) [14.14/2.58]
+|   |   |   |   Question_user_repo >= 367.5
+|   |   |   |   |   Question_user_repo < 550.5
+|   |   |   |   |   |   AnswerCount < 11 : Basic (14.01/6.01) [6.01/1.01]
+|   |   |   |   |   |   AnswerCount >= 11 : Intermediate (2/0) [0/0]
+|   |   |   |   |   Question_user_repo >= 550.5 : Basic (5/0) [3/3]
+|   |   |   Question_user_repo >= 663.5
+|   |   |   |   AnswerCount < 3.01
+|   |   |   |   |   CommentCount < 4.05 : Basic (42.04/17.04) [17.04/5.04]
+|   |   |   |   |   CommentCount >= 4.05 : Intermediate (4/0) [4/2]
+|   |   |   |   AnswerCount >= 3.01
+|   |   |   |   |   QATimeGap < 4.02 : Basic (34.03/10.03) [12.03/2.03]
+|   |   |   |   |   QATimeGap >= 4.02
+|   |   |   |   |   |   QATimeGap < 5
+|   |   |   |   |   |   |   Question_user_repo < 3579.38
+|   |   |   |   |   |   |   |   AnswerCount < 4.77 : Intermediate (3/1) [2/1]
+|   |   |   |   |   |   |   |   AnswerCount >= 4.77 : Advanced (11.01/0.01) [3.01/0.01]
+|   |   |   |   |   |   |   Question_user_repo >= 3579.38 : Intermediate (8.01/1) [2.01/0]
+|   |   |   |   |   |   QATimeGap >= 5
+|   |   |   |   |   |   |   AnswerCount < 3.15 : Advanced (3/0) [0/0]
+|   |   |   |   |   |   |   AnswerCount >= 3.15
+|   |   |   |   |   |   |   |   CommentCount < 1.1
+|   |   |   |   |   |   |   |   |   Question_user_repo < 759.5 : Advanced (2/0) [0/0]
+|   |   |   |   |   |   |   |   |   Question_user_repo >= 759.5
+|   |   |   |   |   |   |   |   |   |   Question_user_repo < 3339.5
+|   |   |   |   |   |   |   |   |   |   |   favoritecount < 1.74 : Intermediate (3.2/0) [2/1]
+|   |   |   |   |   |   |   |   |   |   |   favoritecount >= 1.74
+|   |   |   |   |   |   |   |   |   |   |   |   Question_user_repo < 2898
+|   |   |   |   |   |   |   |   |   |   |   |   |   AnswerCount < 5.5 : Basic (6.01/0.01) [2.01/1.01]
+|   |   |   |   |   |   |   |   |   |   |   |   |   AnswerCount >= 5.5 : Basic (3.8/1.8) [5/2]
+|   |   |   |   |   |   |   |   |   |   |   |   Question_user_repo >= 2898 : Intermediate (3/0) [0/0]
+|   |   |   |   |   |   |   |   |   |   Question_user_repo >= 3339.5 : Basic (19.02/4.02) [3.02/0.02]
+|   |   |   |   |   |   |   |   CommentCount >= 1.1 : Intermediate (45.04/26) [26.04/11]
+QATimeGap >= 7.03
+|   AnswerCount < 5.96
+|   |   AnswerCount < 3.02
+|   |   |   AnswerCount < 2.95
+|   |   |   |   AnswerCount < 2.08
+|   |   |   |   |   QATimeGap < 146.23
+|   |   |   |   |   |   AnswerCount < 1.99
+|   |   |   |   |   |   |   AnswerCount < 1.01
+|   |   |   |   |   |   |   |   Question_user_repo < 668.5 : Basic (8.01/1.01) [3.01/0.01]
+|   |   |   |   |   |   |   |   Question_user_repo >= 668.5
+|   |   |   |   |   |   |   |   |   Question_user_repo < 12989.62 : Intermediate (10.01/4) [4.01/2]
+|   |   |   |   |   |   |   |   |   Question_user_repo >= 12989.62
+|   |   |   |   |   |   |   |   |   |   CommentCount < 3.57 : Basic (4/0) [1/0]
+|   |   |   |   |   |   |   |   |   |   CommentCount >= 3.57 : Advanced (3/0) [2/0]
+|   |   |   |   |   |   |   AnswerCount >= 1.01
+|   |   |   |   |   |   |   |   Question_user_repo < 976.77 : Advanced (9.01/1.01) [9.01/1.01]
+|   |   |   |   |   |   |   |   Question_user_repo >= 976.77 : Intermediate (6.01/1) [1.01/0]
+|   |   |   |   |   |   AnswerCount >= 1.99
+|   |   |   |   |   |   |   Question_user_repo < 215 : Intermediate (3/1) [4/3]
+|   |   |   |   |   |   |   Question_user_repo >= 215
+|   |   |   |   |   |   |   |   CommentCount < 3.19 : Basic (25.02/10.02) [20.02/9.02]
+|   |   |   |   |   |   |   |   CommentCount >= 3.19 : Intermediate (5/0) [9/6]
+|   |   |   |   |   QATimeGap >= 146.23
+|   |   |   |   |   |   favoritecount < 4.21
+|   |   |   |   |   |   |   QATimeGap < 6702.5 : Intermediate (15.82/3) [6.02/1]
+|   |   |   |   |   |   |   QATimeGap >= 6702.5 : Advanced (11.69/2.01) [14.26/3.01]
+|   |   |   |   |   |   favoritecount >= 4.21
+|   |   |   |   |   |   |   CommentCount < 0.02 : Intermediate (2/0) [0/0]
+|   |   |   |   |   |   |   CommentCount >= 0.02
+|   |   |   |   |   |   |   |   CommentCount < 4.34
+|   |   |   |   |   |   |   |   |   Question_user_repo < 5328.48 : Advanced (6.32/0.01) [3.76/0.01]
+|   |   |   |   |   |   |   |   |   Question_user_repo >= 5328.48 : Intermediate (4.2/2) [0/0]
+|   |   |   |   |   |   |   |   CommentCount >= 4.34 : Advanced (9.01/0.01) [4.01/0.01]
+|   |   |   |   AnswerCount >= 2.08
+|   |   |   |   |   CommentCount < 5.28
+|   |   |   |   |   |   QATimeGap < 9.48 : Intermediate (4/0) [0/0]
+|   |   |   |   |   |   QATimeGap >= 9.48
+|   |   |   |   |   |   |   Question_user_repo < 11667.79 : Advanced (39.04/5.04) [18.04/3.04]
+|   |   |   |   |   |   |   Question_user_repo >= 11667.79 : Intermediate (3/1) [1/0]
+|   |   |   |   |   CommentCount >= 5.28 : Intermediate (4/0) [4/2]
+|   |   |   AnswerCount >= 2.95
+|   |   |   |   CommentCount < 5.11
+|   |   |   |   |   QATimeGap < 9.5 : Basic (6.01/0.01) [5.01/2.01]
+|   |   |   |   |   QATimeGap >= 9.5
+|   |   |   |   |   |   QATimeGap < 38.5
+|   |   |   |   |   |   |   QATimeGap < 24.82
+|   |   |   |   |   |   |   |   CommentCount < 2.03
+|   |   |   |   |   |   |   |   |   Question_user_repo < 307.5 : Basic (3/0) [1/1]
+|   |   |   |   |   |   |   |   |   Question_user_repo >= 307.5
+|   |   |   |   |   |   |   |   |   |   QATimeGap < 10.11 : Basic (2/0) [3/0]
+|   |   |   |   |   |   |   |   |   |   QATimeGap >= 10.11 : Intermediate (13.01/8) [5.01/1]
+|   |   |   |   |   |   |   |   CommentCount >= 2.03 : Intermediate (5/1) [1/1]
+|   |   |   |   |   |   |   QATimeGap >= 24.82 : Intermediate (4/0) [2/1]
+|   |   |   |   |   |   QATimeGap >= 38.5
+|   |   |   |   |   |   |   QATimeGap < 333 : Basic (10.01/1.01) [4.01/3.01]
+|   |   |   |   |   |   |   QATimeGap >= 333 : Intermediate (2/0) [0/0]
+|   |   |   |   CommentCount >= 5.11 : Intermediate (10.01/2) [6.01/1]
+|   |   AnswerCount >= 3.02
+|   |   |   AnswerCount < 3.99
+|   |   |   |   QATimeGap < 17
+|   |   |   |   |   QATimeGap < 15.23
+|   |   |   |   |   |   AnswerCount < 3.24 : Advanced (6.01/0.01) [5.01/1.01]
+|   |   |   |   |   |   AnswerCount >= 3.24
+|   |   |   |   |   |   |   QATimeGap < 14.33
+|   |   |   |   |   |   |   |   Question_user_repo < 202.97 : Advanced (3/0) [0/0]
+|   |   |   |   |   |   |   |   Question_user_repo >= 202.97
+|   |   |   |   |   |   |   |   |   favoritecount < 1.45 : Intermediate (2.09/0) [2/1]
+|   |   |   |   |   |   |   |   |   favoritecount >= 1.45
+|   |   |   |   |   |   |   |   |   |   favoritecount < 3.03 : Advanced (7.31/0.31) [7.01/0.01]
+|   |   |   |   |   |   |   |   |   |   favoritecount >= 3.03
+|   |   |   |   |   |   |   |   |   |   |   favoritecount < 3.9 : Intermediate (2.09/0) [0/0]
+|   |   |   |   |   |   |   |   |   |   |   favoritecount >= 3.9
+|   |   |   |   |   |   |   |   |   |   |   |   AnswerCount < 3.52 : Advanced (4/0) [0/0]
+|   |   |   |   |   |   |   |   |   |   |   |   AnswerCount >= 3.52 : Intermediate (8.53/4) [2.01/1]
+|   |   |   |   |   |   |   QATimeGap >= 14.33 : Advanced (4/0) [1/0]
+|   |   |   |   |   QATimeGap >= 15.23 : Intermediate (3/0) [0/0]
+|   |   |   |   QATimeGap >= 17 : Advanced (41.04/3.04) [19.04/4.04]
+|   |   |   AnswerCount >= 3.99
+|   |   |   |   AnswerCount < 4.01
+|   |   |   |   |   Question_user_repo < 5467
+|   |   |   |   |   |   QATimeGap < 8.39 : Basic (4/0) [4/2]
+|   |   |   |   |   |   QATimeGap >= 8.39
+|   |   |   |   |   |   |   QATimeGap < 28.5
+|   |   |   |   |   |   |   |   CommentCount < 2.02 : Intermediate (17.02/11) [10.02/5]
+|   |   |   |   |   |   |   |   CommentCount >= 2.02 : Advanced (13.01/3.01) [6.01/3.01]
+|   |   |   |   |   |   |   QATimeGap >= 28.5
+|   |   |   |   |   |   |   |   CommentCount < 2.5 : Basic (2/0) [3/1]
+|   |   |   |   |   |   |   |   CommentCount >= 2.5 : Intermediate (5/2) [2/0]
+|   |   |   |   |   Question_user_repo >= 5467
+|   |   |   |   |   |   Question_user_repo < 8824 : Intermediate (5/1) [4/2]
+|   |   |   |   |   |   Question_user_repo >= 8824 : Basic (9.01/1.01) [7.01/5.01]
+|   |   |   |   AnswerCount >= 4.01
+|   |   |   |   |   AnswerCount < 5
+|   |   |   |   |   |   AnswerCount < 4.73
+|   |   |   |   |   |   |   AnswerCount < 4.66
+|   |   |   |   |   |   |   |   AnswerCount < 4.16 : Advanced (15.01/1.01) [6.01/0.01]
+|   |   |   |   |   |   |   |   AnswerCount >= 4.16
+|   |   |   |   |   |   |   |   |   Question_user_repo < 14452.35
+|   |   |   |   |   |   |   |   |   |   AnswerCount < 4.6 : Advanced (17.02/7.02) [12.02/1.02]
+|   |   |   |   |   |   |   |   |   |   AnswerCount >= 4.6 : Intermediate (3/0) [2/1]
+|   |   |   |   |   |   |   |   |   Question_user_repo >= 14452.35 : Advanced (5/0) [3/2]
+|   |   |   |   |   |   |   AnswerCount >= 4.66 : Intermediate (4/0) [1/0]
+|   |   |   |   |   |   AnswerCount >= 4.73 : Advanced (24.02/2.02) [12.02/1.02]
+|   |   |   |   |   AnswerCount >= 5
+|   |   |   |   |   |   favoritecount < 13.8
+|   |   |   |   |   |   |   AnswerCount < 5
+|   |   |   |   |   |   |   |   Question_user_repo < 11074.32 : Basic (12.81/7.81) [6.61/2.81]
+|   |   |   |   |   |   |   |   Question_user_repo >= 11074.32 : Advanced (7.01/1.01) [5.81/3.81]
+|   |   |   |   |   |   |   AnswerCount >= 5 : Advanced (25.02/2.02) [14.82/6.82]
+|   |   |   |   |   |   favoritecount >= 13.8
+|   |   |   |   |   |   |   favoritecount < 24.45 : Intermediate (6.12/1) [0.44/0.11]
+|   |   |   |   |   |   |   favoritecount >= 24.45 : Basic (5.1/2.1) [1.37/0.28]
+|   AnswerCount >= 5.96
+|   |   favoritecount < 12.39
+|   |   |   QATimeGap < 12.08 : Basic (19.02/7.02) [8.02/4.02]
+|   |   |   QATimeGap >= 12.08 : Intermediate (26.03/5) [11.03/4]
+|   |   favoritecount >= 12.39 : Basic (17.02/10.02) [15.02/6.02]
+
+Size of the tree : 203
+
+FilteredClassifier using weka.classifiers.trees.REPTree -M 2 -V 0.001 -N 3 -S -279663421 -L -1 -I 0.0 on data filtered through weka.filters.unsupervised.attribute.Remove -V -R 7,6,2,1,3,10
+
+Filtered Header
+@relation 'new_data-weka.filters.unsupervised.attribute.Remove-R2-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.unsupervised.attribute.Remove-V-R7,6,2,1,3,10'
+
+@attribute favoritecount numeric
+@attribute ques_size numeric
+@attribute score numeric
+@attribute Median numeric
+@attribute ViewCount numeric
+@attribute 'Majority voting (class)' {Basic,Intermediate,Advanced}
+
+@data
+
+
+Classifier Model
+
+REPTree
+============
+
+ViewCount < 8362.61
+|   Median < 860.79
+|   |   Median < 9.11
+|   |   |   score < 8.33 : Basic (49/10) [20/6]
+|   |   |   score >= 8.33
+|   |   |   |   score < 14.93
+|   |   |   |   |   score < 12.3
+|   |   |   |   |   |   ques_size < 347.72 : Basic (6/2) [3/0]
+|   |   |   |   |   |   ques_size >= 347.72
+|   |   |   |   |   |   |   Median < 5.25 : Basic (15/6) [5/2]
+|   |   |   |   |   |   |   Median >= 5.25 : Intermediate (15/7) [6/3]
+|   |   |   |   |   score >= 12.3 : Advanced (9/3) [4/3]
+|   |   |   |   score >= 14.93
+|   |   |   |   |   score < 25.5 : Basic (13/1) [5/2]
+|   |   |   |   |   score >= 25.5 : Intermediate (6/2) [3/1]
+|   |   Median >= 9.11
+|   |   |   score < 11.39
+|   |   |   |   ques_size < 1881.79
+|   |   |   |   |   favoritecount < 1.01
+|   |   |   |   |   |   ViewCount < 1963
+|   |   |   |   |   |   |   ViewCount < 289.61
+|   |   |   |   |   |   |   |   ques_size < 924 : Basic (3.69/0.69) [1.34/0.34]
+|   |   |   |   |   |   |   |   ques_size >= 924 : Intermediate (5.04/2.34) [5/0]
+|   |   |   |   |   |   |   ViewCount >= 289.61 : Intermediate (27.89/10.74) [8.05/3.37]
+|   |   |   |   |   |   ViewCount >= 1963 : Basic (25.15/10.43) [9.74/3.37]
+|   |   |   |   |   favoritecount >= 1.01
+|   |   |   |   |   |   Median < 41.63
+|   |   |   |   |   |   |   Median < 16.78
+|   |   |   |   |   |   |   |   ViewCount < 2817.5 : Advanced (24.23/9.58) [21.29/11.29]
+|   |   |   |   |   |   |   |   ViewCount >= 2817.5 : Basic (15.97/7.66) [2/0]
+|   |   |   |   |   |   |   Median >= 16.78
+|   |   |   |   |   |   |   |   ques_size < 676.28
+|   |   |   |   |   |   |   |   |   score < 9.45 : Basic (9.38/3.09) [5.32/2]
+|   |   |   |   |   |   |   |   |   score >= 9.45 : Intermediate (4/-0) [0/0]
+|   |   |   |   |   |   |   |   ques_size >= 676.28 : Intermediate (30.13/9.97) [19.29/12.32]
+|   |   |   |   |   |   Median >= 41.63
+|   |   |   |   |   |   |   ViewCount < 3813.58
+|   |   |   |   |   |   |   |   ViewCount < 1175.95 : Basic (4.32/1) [0/0]
+|   |   |   |   |   |   |   |   ViewCount >= 1175.95
+|   |   |   |   |   |   |   |   |   ViewCount < 2148 : Advanced (9/0) [5/0]
+|   |   |   |   |   |   |   |   |   ViewCount >= 2148 : Basic (12/6) [4.32/1.66]
+|   |   |   |   |   |   |   ViewCount >= 3813.58 : Intermediate (9.66/5) [3.66/1]
+|   |   |   |   ques_size >= 1881.79
+|   |   |   |   |   score < 7.27
+|   |   |   |   |   |   ques_size < 2481.7 : Intermediate (10.05/3) [5/1]
+|   |   |   |   |   |   ques_size >= 2481.7
+|   |   |   |   |   |   |   favoritecount < 3.91
+|   |   |   |   |   |   |   |   ViewCount < 747.35 : Basic (2.35/0.68) [1.33/0.67]
+|   |   |   |   |   |   |   |   ViewCount >= 747.35 : Advanced (11.73/0.73) [6/2]
+|   |   |   |   |   |   |   favoritecount >= 3.91 : Intermediate (7.04/1.33) [2.67/0.33]
+|   |   |   |   |   score >= 7.27 : Intermediate (33/4) [21/10]
+|   |   |   score >= 11.39
+|   |   |   |   score < 34.45
+|   |   |   |   |   favoritecount < 7.71
+|   |   |   |   |   |   Median < 30.76
+|   |   |   |   |   |   |   ViewCount < 6154.43
+|   |   |   |   |   |   |   |   ques_size < 287 : Basic (3.85/0.04) [1/0]
+|   |   |   |   |   |   |   |   ques_size >= 287
+|   |   |   |   |   |   |   |   |   ViewCount < 844.47 : Basic (4.67/2.04) [2.62/0.81]
+|   |   |   |   |   |   |   |   |   ViewCount >= 844.47
+|   |   |   |   |   |   |   |   |   |   favoritecount < 4.74
+|   |   |   |   |   |   |   |   |   |   |   ViewCount < 2495.54 : Advanced (15.14/0.14) [7.05/5.05]
+|   |   |   |   |   |   |   |   |   |   |   ViewCount >= 2495.54
+|   |   |   |   |   |   |   |   |   |   |   |   favoritecount < 3.47 : Intermediate (5.05/2) [5/3]
+|   |   |   |   |   |   |   |   |   |   |   |   favoritecount >= 3.47 : Advanced (6.06/0.06) [1/0]
+|   |   |   |   |   |   |   |   |   |   favoritecount >= 4.74
+|   |   |   |   |   |   |   |   |   |   |   ques_size < 1534.54
+|   |   |   |   |   |   |   |   |   |   |   |   favoritecount < 5.21 : Basic (4.04/0.04) [1.25/0.13]
+|   |   |   |   |   |   |   |   |   |   |   |   favoritecount >= 5.21 : Intermediate (5.05/2) [2.32/0.16]
+|   |   |   |   |   |   |   |   |   |   |   ques_size >= 1534.54 : Advanced (5.05/0.05) [2/2]
+|   |   |   |   |   |   |   ViewCount >= 6154.43
+|   |   |   |   |   |   |   |   favoritecount < 5.14 : Basic (5.05/0.05) [1/1]
+|   |   |   |   |   |   |   |   favoritecount >= 5.14 : Intermediate (2.02/0) [2/0]
+|   |   |   |   |   |   Median >= 30.76 : Advanced (46.81/13.81) [24.81/11.81]
+|   |   |   |   |   favoritecount >= 7.71 : Intermediate (23.87/7.57) [7.94/3.38]
+|   |   |   |   score >= 34.45 : Advanced (32/4) [25/3]
+|   Median >= 860.79
+|   |   score < 15.02
+|   |   |   ques_size < 1170.66
+|   |   |   |   ViewCount < 3563.78 : Basic (6/1) [7/3]
+|   |   |   |   ViewCount >= 3563.78 : Advanced (16/4) [6/4]
+|   |   |   ques_size >= 1170.66
+|   |   |   |   ViewCount < 603.96 : Intermediate (2/1) [1/0]
+|   |   |   |   ViewCount >= 603.96
+|   |   |   |   |   ques_size < 3024.74
+|   |   |   |   |   |   ViewCount < 2521
+|   |   |   |   |   |   |   ViewCount < 818.8 : Advanced (3/0) [1/0]
+|   |   |   |   |   |   |   ViewCount >= 818.8 : Intermediate (8/1) [3/1]
+|   |   |   |   |   |   ViewCount >= 2521
+|   |   |   |   |   |   |   Median < 338930.53
+|   |   |   |   |   |   |   |   score < 7.36 : Intermediate (4/1) [2/0]
+|   |   |   |   |   |   |   |   score >= 7.36 : Advanced (14/1) [4/3]
+|   |   |   |   |   |   |   Median >= 338930.53 : Advanced (14/0) [4/2]
+|   |   |   |   |   ques_size >= 3024.74 : Advanced (11/0) [5/0]
+|   |   score >= 15.02 : Advanced (58/0) [37/2]
+ViewCount >= 8362.61
+|   ViewCount < 58023.82
+|   |   favoritecount < 7.04
+|   |   |   Median < 60478.38
+|   |   |   |   ques_size < 2081.03
+|   |   |   |   |   ques_size < 230.5 : Basic (14.16/0.03) [6/2]
+|   |   |   |   |   ques_size >= 230.5
+|   |   |   |   |   |   Median < 5.2 : Basic (16.12/1) [8.12/4]
+|   |   |   |   |   |   Median >= 5.2
+|   |   |   |   |   |   |   score < 7.14 : Basic (17.95/3.14) [9.12/4.12]
+|   |   |   |   |   |   |   score >= 7.14
+|   |   |   |   |   |   |   |   score < 7.82 : Intermediate (3.56/0) [0/0]
+|   |   |   |   |   |   |   |   score >= 7.82
+|   |   |   |   |   |   |   |   |   ViewCount < 10523.47 : Basic (13.71/1.58) [2/1]
+|   |   |   |   |   |   |   |   |   ViewCount >= 10523.47
+|   |   |   |   |   |   |   |   |   |   ViewCount < 13383.12 : Intermediate (17.15/4) [6.56/2.56]
+|   |   |   |   |   |   |   |   |   |   ViewCount >= 13383.12 : Basic (50.45/17.33) [23.68/7.56]
+|   |   |   |   ques_size >= 2081.03
+|   |   |   |   |   favoritecount < 4.5 : Intermediate (7.14/0) [4.75/2.37]
+|   |   |   |   |   favoritecount >= 4.5 : Basic (3.57/1.57) [5.37/3.19]
+|   |   |   Median >= 60478.38
+|   |   |   |   Median < 279510.84
+|   |   |   |   |   ques_size < 1521.53 : Basic (7/3) [1/0]
+|   |   |   |   |   ques_size >= 1521.53 : Advanced (6/0) [6/0]
+|   |   |   |   Median >= 279510.84
+|   |   |   |   |   Median < 1347776.4 : Basic (14/0) [7.12/3]
+|   |   |   |   |   Median >= 1347776.4 : Intermediate (4.56/1.56) [4/1]
+|   |   favoritecount >= 7.04
+|   |   |   favoritecount < 21.44
+|   |   |   |   ques_size < 1148.5
+|   |   |   |   |   Median < 10.37 : Basic (13.82/3.35) [4.88/2]
+|   |   |   |   |   Median >= 10.37
+|   |   |   |   |   |   score < 13.29 : Basic (7.11/1.35) [3.17/2.59]
+|   |   |   |   |   |   score >= 13.29
+|   |   |   |   |   |   |   Median < 21.75 : Intermediate (12.59/1) [4/3]
+|   |   |   |   |   |   |   Median >= 21.75
+|   |   |   |   |   |   |   |   Median < 105.5 : Basic (10.59/4.59) [10.29/6.29]
+|   |   |   |   |   |   |   |   Median >= 105.5
+|   |   |   |   |   |   |   |   |   score < 22.93 : Intermediate (7/0) [3.29/1.29]
+|   |   |   |   |   |   |   |   |   score >= 22.93
+|   |   |   |   |   |   |   |   |   |   score < 28.42 : Basic (2/0) [1/0]
+|   |   |   |   |   |   |   |   |   |   score >= 28.42
+|   |   |   |   |   |   |   |   |   |   |   Median < 42256.69 : Intermediate (2.29/0) [2/0]
+|   |   |   |   |   |   |   |   |   |   |   Median >= 42256.69 : Basic (6/2) [2/0]
+|   |   |   |   ques_size >= 1148.5 : Intermediate (30.11/6.88) [12.88/7.59]
+|   |   |   favoritecount >= 21.44
+|   |   |   |   Median < 188.5
+|   |   |   |   |   ViewCount < 36606.53 : Advanced (24.56/10.56) [13.88/3.88]
+|   |   |   |   |   ViewCount >= 36606.53 : Intermediate (6.6/1.15) [7.15/3]
+|   |   |   |   Median >= 188.5
+|   |   |   |   |   score < 72 : Basic (10.59/4.29) [2.73/0.29]
+|   |   |   |   |   score >= 72 : Intermediate (4/0) [5/2]
+|   ViewCount >= 58023.82
+|   |   Median < 190453.71 : Basic (31.13/0.13) [21/4]
+|   |   Median >= 190453.71
+|   |   |   Median < 372693.63 : Intermediate (2/0) [1/0]
+|   |   |   Median >= 372693.63 : Basic (35/8) [19/2]
+
+Size of the tree : 153
+
+FilteredClassifier using weka.classifiers.trees.REPTree -M 2 -V 0.001 -N 3 -S 333140008 -L -1 -I 0.0 on data filtered through weka.filters.unsupervised.attribute.Remove -V -R 2,6,3,9,5,10
+
+Filtered Header
+@relation 'new_data-weka.filters.unsupervised.attribute.Remove-R2-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.unsupervised.attribute.Remove-V-R2,6,3,9,5,10'
+
+@attribute score numeric
+@attribute ques_size numeric
+@attribute ViewCount numeric
+@attribute QATimeGap numeric
+@attribute CommentCount numeric
+@attribute 'Majority voting (class)' {Basic,Intermediate,Advanced}
+
+@data
+
+
+Classifier Model
+
+REPTree
+============
+
+QATimeGap < 7.03
+|   QATimeGap < 3.04 : Basic (226.22/64.22) [88.22/26.22]
+|   QATimeGap >= 3.04
+|   |   QATimeGap < 3.97
+|   |   |   ques_size < 362.39 : Advanced (11.01/1.01) [2.01/0.01]
+|   |   |   ques_size >= 362.39 : Intermediate (11.01/2) [5.01/2]
+|   |   QATimeGap >= 3.97
+|   |   |   ques_size < 1364
+|   |   |   |   ViewCount < 15027.53
+|   |   |   |   |   score < 11.42
+|   |   |   |   |   |   ViewCount < 904 : Basic (13/7) [9.02/4.02]
+|   |   |   |   |   |   ViewCount >= 904
+|   |   |   |   |   |   |   ques_size < 415.5
+|   |   |   |   |   |   |   |   ques_size < 347.5 : Basic (9/2) [5.02/3.02]
+|   |   |   |   |   |   |   |   ques_size >= 347.5 : Intermediate (4/1) [2.01/0]
+|   |   |   |   |   |   |   ques_size >= 415.5 : Basic (39/7) [16.07/7.07]
+|   |   |   |   |   score >= 11.42
+|   |   |   |   |   |   ViewCount < 10507.35
+|   |   |   |   |   |   |   ViewCount < 7834
+|   |   |   |   |   |   |   |   ques_size < 1104.39
+|   |   |   |   |   |   |   |   |   score < 16.79
+|   |   |   |   |   |   |   |   |   |   ques_size < 384.3 : Basic (2/0) [1/1]
+|   |   |   |   |   |   |   |   |   |   ques_size >= 384.3 : Advanced (12/7) [15/8]
+|   |   |   |   |   |   |   |   |   score >= 16.79 : Intermediate (8.05/2) [6/4]
+|   |   |   |   |   |   |   |   ques_size >= 1104.39 : Basic (8.02/4.02) [1/1]
+|   |   |   |   |   |   |   ViewCount >= 7834 : Basic (7.02/1.02) [3/0]
+|   |   |   |   |   |   ViewCount >= 10507.35
+|   |   |   |   |   |   |   ques_size < 501.24 : Intermediate (4.01/0) [2/0]
+|   |   |   |   |   |   |   ques_size >= 501.24 : Advanced (8.02/3.02) [5/3]
+|   |   |   |   ViewCount >= 15027.53
+|   |   |   |   |   CommentCount < 2.15 : Basic (36.03/5.03) [22.03/8.03]
+|   |   |   |   |   CommentCount >= 2.15 : Basic (23.02/12.02) [13.02/3.02]
+|   |   |   ques_size >= 1364
+|   |   |   |   CommentCount < 3.14 : Basic (36.03/17.03) [20.03/11.03]
+|   |   |   |   CommentCount >= 3.14 : Intermediate (15.01/3) [10.01/6]
+QATimeGap >= 7.03
+|   ViewCount < 9353.02
+|   |   ViewCount < 607.46 : Intermediate (56.05/26) [25.05/5]
+|   |   ViewCount >= 607.46
+|   |   |   score < 24.92
+|   |   |   |   CommentCount < 6.34
+|   |   |   |   |   QATimeGap < 972.31
+|   |   |   |   |   |   QATimeGap < 107.32
+|   |   |   |   |   |   |   CommentCount < 5.04
+|   |   |   |   |   |   |   |   ViewCount < 1174.94 : Intermediate (8/3) [14.01/6]
+|   |   |   |   |   |   |   |   ViewCount >= 1174.94
+|   |   |   |   |   |   |   |   |   score < 7.02
+|   |   |   |   |   |   |   |   |   |   score < 6.94
+|   |   |   |   |   |   |   |   |   |   |   score < 6.1
+|   |   |   |   |   |   |   |   |   |   |   |   ques_size < 1018.41 : Basic (9/1) [3.11/1.11]
+|   |   |   |   |   |   |   |   |   |   |   |   ques_size >= 1018.41
+|   |   |   |   |   |   |   |   |   |   |   |   |   CommentCount < 1.98 : Intermediate (5/1) [3.06/2]
+|   |   |   |   |   |   |   |   |   |   |   |   |   CommentCount >= 1.98 : Advanced (4/1) [3.05/0.05]
+|   |   |   |   |   |   |   |   |   |   |   score >= 6.1 : Advanced (20/2) [1/0]
+|   |   |   |   |   |   |   |   |   |   score >= 6.94
+|   |   |   |   |   |   |   |   |   |   |   ques_size < 1980
+|   |   |   |   |   |   |   |   |   |   |   |   ViewCount < 8018.13 : Basic (11/2) [5/3]
+|   |   |   |   |   |   |   |   |   |   |   |   ViewCount >= 8018.13 : Intermediate (3/0) [3/0]
+|   |   |   |   |   |   |   |   |   |   |   ques_size >= 1980 : Intermediate (3/0) [1/1]
+|   |   |   |   |   |   |   |   |   score >= 7.02
+|   |   |   |   |   |   |   |   |   |   ViewCount < 3814.34
+|   |   |   |   |   |   |   |   |   |   |   QATimeGap < 15.61 : Advanced (37/5) [31/7]
+|   |   |   |   |   |   |   |   |   |   |   QATimeGap >= 15.61
+|   |   |   |   |   |   |   |   |   |   |   |   CommentCount < 2.07 : Basic (8/4) [3/1]
+|   |   |   |   |   |   |   |   |   |   |   |   CommentCount >= 2.07 : Advanced (8/2) [3/1]
+|   |   |   |   |   |   |   |   |   |   ViewCount >= 3814.34
+|   |   |   |   |   |   |   |   |   |   |   ViewCount < 4078 : Intermediate (5/0) [2/0]
+|   |   |   |   |   |   |   |   |   |   |   ViewCount >= 4078
+|   |   |   |   |   |   |   |   |   |   |   |   ques_size < 431.79 : Intermediate (4/0) [3/2]
+|   |   |   |   |   |   |   |   |   |   |   |   ques_size >= 431.79 : Advanced (56/20) [33/14]
+|   |   |   |   |   |   |   CommentCount >= 5.04
+|   |   |   |   |   |   |   |   ques_size < 2309.27
+|   |   |   |   |   |   |   |   |   CommentCount < 5.85 : Advanced (6/0) [2.01/1.01]
+|   |   |   |   |   |   |   |   |   CommentCount >= 5.85 : Intermediate (3/0) [1/0]
+|   |   |   |   |   |   |   |   ques_size >= 2309.27 : Advanced (16/0) [4.02/0.02]
+|   |   |   |   |   |   QATimeGap >= 107.32
+|   |   |   |   |   |   |   ViewCount < 6729.16
+|   |   |   |   |   |   |   |   CommentCount < 1.19 : Intermediate (13/0) [5.02/2]
+|   |   |   |   |   |   |   |   CommentCount >= 1.19
+|   |   |   |   |   |   |   |   |   ques_size < 895.22 : Advanced (3/0) [3/1]
+|   |   |   |   |   |   |   |   |   ques_size >= 895.22 : Intermediate (10/3) [4.01/0]
+|   |   |   |   |   |   |   ViewCount >= 6729.16 : Advanced (4/0) [1/0]
+|   |   |   |   |   QATimeGap >= 972.31 : Advanced (42/4) [20.05/2.05]
+|   |   |   |   CommentCount >= 6.34 : Intermediate (26/5) [9.03/4]
+|   |   |   score >= 24.92
+|   |   |   |   score < 38.41
+|   |   |   |   |   ViewCount < 6720.08 : Advanced (38.36/4.36) [17/3]
+|   |   |   |   |   ViewCount >= 6720.08 : Basic (2.02/1.02) [4/1]
+|   |   |   |   score >= 38.41 : Advanced (44/2) [18/0]
+|   ViewCount >= 9353.02
+|   |   QATimeGap < 7422.65
+|   |   |   ques_size < 556.57
+|   |   |   |   ViewCount < 24614.52
+|   |   |   |   |   score < 25.37 : Basic (13/7) [8.02/3.02]
+|   |   |   |   |   score >= 25.37 : Advanced (10.02/4.02) [3/1]
+|   |   |   |   ViewCount >= 24614.52 : Basic (12.01/3.01) [9.01/1.01]
+|   |   |   ques_size >= 556.57
+|   |   |   |   ques_size < 3651.97
+|   |   |   |   |   ques_size < 650.94 : Intermediate (6.01/0) [1.01/0]
+|   |   |   |   |   ques_size >= 650.94
+|   |   |   |   |   |   score < 7.5 : Basic (5/0) [0.06/0.06]
+|   |   |   |   |   |   score >= 7.5
+|   |   |   |   |   |   |   ViewCount < 81646.5
+|   |   |   |   |   |   |   |   ViewCount < 17498.5 : Basic (21.02/7.02) [15/6]
+|   |   |   |   |   |   |   |   ViewCount >= 17498.5
+|   |   |   |   |   |   |   |   |   ViewCount < 36946.62
+|   |   |   |   |   |   |   |   |   |   CommentCount < 0.16
+|   |   |   |   |   |   |   |   |   |   |   ques_size < 1138.5 : Intermediate (2/0) [2/1]
+|   |   |   |   |   |   |   |   |   |   |   ques_size >= 1138.5 : Basic (4/1) [3/1]
+|   |   |   |   |   |   |   |   |   |   CommentCount >= 0.16 : Intermediate (12.01/0) [12/6]
+|   |   |   |   |   |   |   |   |   ViewCount >= 36946.62 : Basic (11.01/4.01) [4/1]
+|   |   |   |   |   |   |   ViewCount >= 81646.5 : Basic (4/0) [2/0]
+|   |   |   |   ques_size >= 3651.97 : Intermediate (5/1) [4/2]
+|   |   QATimeGap >= 7422.65
+|   |   |   ViewCount < 18218.52 : Advanced (8.01/0.01) [6.01/1.01]
+|   |   |   ViewCount >= 18218.52 : Intermediate (3/0) [1/1]
+
+Size of the tree : 117
+
+FilteredClassifier using weka.classifiers.trees.REPTree -M 2 -V 0.001 -N 3 -S 1743110618 -L -1 -I 0.0 on data filtered through weka.filters.unsupervised.attribute.Remove -V -R 4,3,5,1,8,10
+
+Filtered Header
+@relation 'new_data-weka.filters.unsupervised.attribute.Remove-R2-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.unsupervised.attribute.Remove-V-R4,3,5,1,8,10'
+
+@attribute AnswerCount numeric
+@attribute ViewCount numeric
+@attribute CommentCount numeric
+@attribute Median numeric
+@attribute Question_user_repo numeric
+@attribute 'Majority voting (class)' {Basic,Intermediate,Advanced}
+
+@data
+
+
+Classifier Model
+
+REPTree
+============
+
+ViewCount < 8314.66
+|   Median < 31.2
+|   |   Median < 7.01 : Basic (73/26) [39/11]
+|   |   Median >= 7.01
+|   |   |   ViewCount < 752.74 : Intermediate (54/25) [20.13/6]
+|   |   |   ViewCount >= 752.74
+|   |   |   |   ViewCount < 2796.68
+|   |   |   |   |   CommentCount < 0 : Basic (13/4) [11.03/5.03]
+|   |   |   |   |   CommentCount >= 0
+|   |   |   |   |   |   CommentCount < 4.02
+|   |   |   |   |   |   |   ViewCount < 1138.96
+|   |   |   |   |   |   |   |   ViewCount < 868 : Intermediate (2/0) [1/1]
+|   |   |   |   |   |   |   |   ViewCount >= 868 : Basic (8/3) [4.02/2.02]
+|   |   |   |   |   |   |   ViewCount >= 1138.96
+|   |   |   |   |   |   |   |   AnswerCount < 4.38
+|   |   |   |   |   |   |   |   |   Median < 11.99 : Basic (4/1) [2.09/0.09]
+|   |   |   |   |   |   |   |   |   Median >= 11.99 : Advanced (33/3) [14/4]
+|   |   |   |   |   |   |   |   AnswerCount >= 4.38
+|   |   |   |   |   |   |   |   |   CommentCount < 2.74 : Intermediate (8/2) [1.02/0]
+|   |   |   |   |   |   |   |   |   CommentCount >= 2.74 : Advanced (10/3) [6.02/1.02]
+|   |   |   |   |   |   CommentCount >= 4.02 : Advanced (33/11) [14.08/6.08]
+|   |   |   |   ViewCount >= 2796.68
+|   |   |   |   |   CommentCount < 0.64
+|   |   |   |   |   |   ViewCount < 4547.17 : Basic (10/1) [3.02/2.02]
+|   |   |   |   |   |   ViewCount >= 4547.17
+|   |   |   |   |   |   |   AnswerCount < 3.01 : Intermediate (5/0) [4.01/2]
+|   |   |   |   |   |   |   AnswerCount >= 3.01
+|   |   |   |   |   |   |   |   Question_user_repo < 387.72 : Intermediate (3/1) [3.01/1]
+|   |   |   |   |   |   |   |   Question_user_repo >= 387.72 : Advanced (13/2) [8.03/6.03]
+|   |   |   |   |   CommentCount >= 0.64
+|   |   |   |   |   |   Median < 20.75
+|   |   |   |   |   |   |   ViewCount < 3993 : Basic (8/0) [3.03/1.03]
+|   |   |   |   |   |   |   ViewCount >= 3993
+|   |   |   |   |   |   |   |   Question_user_repo < 13207.5
+|   |   |   |   |   |   |   |   |   CommentCount < 1.11 : Basic (9/0) [2.03/2.03]
+|   |   |   |   |   |   |   |   |   CommentCount >= 1.11
+|   |   |   |   |   |   |   |   |   |   Question_user_repo < 3318
+|   |   |   |   |   |   |   |   |   |   |   AnswerCount < 3.76 : Basic (4/2) [1.02/0.02]
+|   |   |   |   |   |   |   |   |   |   |   AnswerCount >= 3.76 : Intermediate (4/0) [3.02/1]
+|   |   |   |   |   |   |   |   |   |   Question_user_repo >= 3318 : Basic (3/0) [4.01/2.01]
+|   |   |   |   |   |   |   |   Question_user_repo >= 13207.5 : Intermediate (6/1) [2.02/1]
+|   |   |   |   |   |   Median >= 20.75
+|   |   |   |   |   |   |   Median < 22.25 : Intermediate (7/0) [0/0]
+|   |   |   |   |   |   |   Median >= 22.25
+|   |   |   |   |   |   |   |   ViewCount < 4866 : Basic (3/0) [3/1]
+|   |   |   |   |   |   |   |   ViewCount >= 4866 : Intermediate (8/3) [5/2]
+|   Median >= 31.2
+|   |   ViewCount < 607.46 : Intermediate (27.05/12) [10/4]
+|   |   ViewCount >= 607.46
+|   |   |   AnswerCount < 5.88
+|   |   |   |   Median < 1388.37
+|   |   |   |   |   ViewCount < 5711.16
+|   |   |   |   |   |   AnswerCount < 1.97
+|   |   |   |   |   |   |   Question_user_repo < 18171 : Intermediate (17.06/4) [6/2]
+|   |   |   |   |   |   |   Question_user_repo >= 18171 : Advanced (10.03/1.03) [6/1]
+|   |   |   |   |   |   AnswerCount >= 1.97
+|   |   |   |   |   |   |   CommentCount < 0.01
+|   |   |   |   |   |   |   |   Question_user_repo < 4703.54 : Intermediate (7.02/2) [3/1]
+|   |   |   |   |   |   |   |   Question_user_repo >= 4703.54
+|   |   |   |   |   |   |   |   |   Question_user_repo < 6645.71 : Advanced (9.03/2.03) [3/1]
+|   |   |   |   |   |   |   |   |   Question_user_repo >= 6645.71 : Basic (7.02/1.02) [0/0]
+|   |   |   |   |   |   |   CommentCount >= 0.01
+|   |   |   |   |   |   |   |   Question_user_repo < 47543.3
+|   |   |   |   |   |   |   |   |   Question_user_repo < 2230.31 : Advanced (48.16/9.16) [35/11]
+|   |   |   |   |   |   |   |   |   Question_user_repo >= 2230.31
+|   |   |   |   |   |   |   |   |   |   Question_user_repo < 3891.21 : Intermediate (5.02/1) [1/0]
+|   |   |   |   |   |   |   |   |   |   Question_user_repo >= 3891.21
+|   |   |   |   |   |   |   |   |   |   |   Question_user_repo < 4884.32 : Advanced (5.02/0.02) [0/0]
+|   |   |   |   |   |   |   |   |   |   |   Question_user_repo >= 4884.32
+|   |   |   |   |   |   |   |   |   |   |   |   Median < 209.67
+|   |   |   |   |   |   |   |   |   |   |   |   |   Median < 76.28
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Question_user_repo < 8867.25 : Advanced (2.01/0.01) [3/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Question_user_repo >= 8867.25 : Basic (5.04/0.04) [2/1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   Median >= 76.28 : Intermediate (4/1) [1/1]
+|   |   |   |   |   |   |   |   |   |   |   |   Median >= 209.67 : Advanced (4/-0) [6/2]
+|   |   |   |   |   |   |   |   Question_user_repo >= 47543.3 : Advanced (15.05/0.05) [5/1]
+|   |   |   |   |   ViewCount >= 5711.16 : Intermediate (15.05/3) [7/2]
+|   |   |   |   Median >= 1388.37
+|   |   |   |   |   CommentCount < 6.62 : Advanced (105/10) [64/10]
+|   |   |   |   |   CommentCount >= 6.62 : Intermediate (8/2) [3/0]
+|   |   |   AnswerCount >= 5.88
+|   |   |   |   ViewCount < 3394.5 : Basic (10.02/2.02) [5/5]
+|   |   |   |   ViewCount >= 3394.5 : Intermediate (12.02/5) [19/10]
+ViewCount >= 8314.66
+|   ViewCount < 59609.5
+|   |   Question_user_repo < 464.5
+|   |   |   AnswerCount < 3.5 : Basic (17.02/0.02) [10.02/2.02]
+|   |   |   AnswerCount >= 3.5
+|   |   |   |   ViewCount < 14017.5 : Basic (6.01/0.01) [5.01/2.01]
+|   |   |   |   ViewCount >= 14017.5
+|   |   |   |   |   Question_user_repo < 182.5
+|   |   |   |   |   |   ViewCount < 39680.5 : Intermediate (6.01/0) [4.01/2]
+|   |   |   |   |   |   ViewCount >= 39680.5 : Basic (2/0) [1/0]
+|   |   |   |   |   Question_user_repo >= 182.5 : Basic (12.01/2.01) [7.01/1.01]
+|   |   Question_user_repo >= 464.5
+|   |   |   CommentCount < 0.01 : Basic (68.07/21.07) [32.07/8.07]
+|   |   |   CommentCount >= 0.01
+|   |   |   |   CommentCount < 0.9
+|   |   |   |   |   AnswerCount < 5.19
+|   |   |   |   |   |   ViewCount < 17972.08 : Advanced (15.01/0.01) [5.01/2.01]
+|   |   |   |   |   |   ViewCount >= 17972.08 : Intermediate (2/0) [0/0]
+|   |   |   |   |   AnswerCount >= 5.19 : Intermediate (5/0) [4/0]
+|   |   |   |   CommentCount >= 0.9
+|   |   |   |   |   Median < 277565.09
+|   |   |   |   |   |   Median < 10.08
+|   |   |   |   |   |   |   CommentCount < 3.38
+|   |   |   |   |   |   |   |   CommentCount < 2.5 : Basic (18/6) [14.09/3.09]
+|   |   |   |   |   |   |   |   CommentCount >= 2.5 : Basic (9/0) [3.04/0.04]
+|   |   |   |   |   |   |   CommentCount >= 3.38
+|   |   |   |   |   |   |   |   Question_user_repo < 1480.08 : Advanced (4/1) [2.02/0.02]
+|   |   |   |   |   |   |   |   Question_user_repo >= 1480.08 : Intermediate (8/3) [2.04/2]
+|   |   |   |   |   |   Median >= 10.08
+|   |   |   |   |   |   |   CommentCount < 3.83
+|   |   |   |   |   |   |   |   CommentCount < 1.01
+|   |   |   |   |   |   |   |   |   Question_user_repo < 10726 : Basic (17.03/6.03) [4/1]
+|   |   |   |   |   |   |   |   |   Question_user_repo >= 10726 : Intermediate (4.01/0) [1/0]
+|   |   |   |   |   |   |   |   CommentCount >= 1.01 : Intermediate (62.1/28) [38/22]
+|   |   |   |   |   |   |   CommentCount >= 3.83
+|   |   |   |   |   |   |   |   AnswerCount < 3.97 : Intermediate (10.02/1) [5/0]
+|   |   |   |   |   |   |   |   AnswerCount >= 3.97
+|   |   |   |   |   |   |   |   |   Median < 18.25 : Intermediate (4/0) [1/1]
+|   |   |   |   |   |   |   |   |   Median >= 18.25
+|   |   |   |   |   |   |   |   |   |   Median < 26.5 : Basic (6/1) [1/0]
+|   |   |   |   |   |   |   |   |   |   Median >= 26.5
+|   |   |   |   |   |   |   |   |   |   |   ViewCount < 17771 : Intermediate (7.02/1) [1/0]
+|   |   |   |   |   |   |   |   |   |   |   ViewCount >= 17771 : Basic (10.02/4.02) [4/1]
+|   |   |   |   |   Median >= 277565.09
+|   |   |   |   |   |   Median < 1160690.78 : Basic (19/4) [4/2]
+|   |   |   |   |   |   Median >= 1160690.78 : Intermediate (14/4) [3/1]
+|   ViewCount >= 59609.5 : Basic (71.07/12.07) [33.07/3.07]
+
+Size of the tree : 131
+
+
+
+Time taken to build model: 0.41 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        1111               71.6774 %
+Incorrectly Classified Instances       439               28.3226 %
+Kappa statistic                          0.5696
+Mean absolute error                      0.3084
+Root mean squared error                  0.3687
+Relative absolute error                 69.8327 %
+Root relative squared error             78.4643 %
+Total Number of Instances             1550     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.801    0.231    0.685      0.801    0.739      0.558    0.868     0.787     Basic
+                 0.484    0.120    0.650      0.484    0.555      0.399    0.791     0.626     Intermediate
+                 0.853    0.085    0.811      0.853    0.832      0.758    0.956     0.925     Advanced
+Weighted Avg.    0.717    0.152    0.712      0.717    0.709      0.568    0.870     0.777     
+
+=== Confusion Matrix ===
+
+   a   b   c   <-- classified as
+ 479  97  22 |   a = Basic
+ 182 236  70 |   b = Intermediate
+  38  30 396 |   c = Advanced
+

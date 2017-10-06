@@ -1,0 +1,70 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.bayes.BayesNet -D -Q weka.classifiers.bayes.net.search.local.K2 -- -P 1 -S BAYES -E weka.classifiers.bayes.net.estimate.SimpleEstimator -- -A 0.5
+Relation:     new_data-weka.filters.unsupervised.attribute.Remove-R2-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1
+Instances:    1550
+Attributes:   10
+              Median
+              score
+              ViewCount
+              AnswerCount
+              CommentCount
+              ques_size
+              favoritecount
+              Question_user_repo
+              QATimeGap
+              Majority voting (class)
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Bayes Network Classifier
+not using ADTree
+#attributes=10 #classindex=9
+Network structure (nodes followed by parents)
+Median(4): Majority voting (class) 
+score(10): Majority voting (class) 
+ViewCount(5): Majority voting (class) 
+AnswerCount(11): Majority voting (class) 
+CommentCount(13): Majority voting (class) 
+ques_size(4): Majority voting (class) 
+favoritecount(4): Majority voting (class) 
+Question_user_repo(2): Majority voting (class) 
+QATimeGap(9): Majority voting (class) 
+Majority voting (class)(3): 
+LogScore Bayes: -19271.937398179718
+LogScore BDeu: -19772.000467968297
+LogScore MDL: -19729.173783550526
+LogScore ENTROPY: -19137.819961652505
+LogScore AIC: -19298.819961652505
+
+
+Time taken to build model: 0.08 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        1065               68.7097 %
+Incorrectly Classified Instances       485               31.2903 %
+Kappa statistic                          0.5238
+Mean absolute error                      0.2347
+Root mean squared error                  0.3841
+Relative absolute error                 53.1468 %
+Root relative squared error             81.7479 %
+Total Number of Instances             1550     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.861    0.220    0.711      0.861    0.779      0.626    0.897     0.800     Basic
+                 0.381    0.130    0.574      0.381    0.458      0.287    0.726     0.563     Intermediate
+                 0.784    0.127    0.725      0.784    0.754      0.643    0.908     0.824     Advanced
+Weighted Avg.    0.687    0.164    0.672      0.687    0.670      0.524    0.847     0.733     
+
+=== Confusion Matrix ===
+
+   a   b   c   <-- classified as
+ 515  74   9 |   a = Basic
+ 173 186 129 |   b = Intermediate
+  36  64 364 |   c = Advanced
+

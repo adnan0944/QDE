@@ -1,0 +1,55 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.RandomForest -P 100 -I 100 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1
+Relation:     new_data-weka.filters.unsupervised.attribute.Remove-R2-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1
+Instances:    1550
+Attributes:   10
+              Median
+              score
+              ViewCount
+              AnswerCount
+              CommentCount
+              ques_size
+              favoritecount
+              Question_user_repo
+              QATimeGap
+              Majority voting (class)
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+RandomForest
+
+Bagging with 100 iterations and base learner
+
+weka.classifiers.trees.RandomTree -K 0 -M 1.0 -V 0.001 -S 1 -do-not-check-capabilities
+
+Time taken to build model: 1.48 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        1156               74.5806 %
+Incorrectly Classified Instances       394               25.4194 %
+Kappa statistic                          0.6165
+Mean absolute error                      0.2599
+Root mean squared error                  0.3418
+Relative absolute error                 58.8585 %
+Root relative squared error             72.7451 %
+Total Number of Instances             1550     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.706    0.171    0.721      0.706    0.713      0.537    0.872     0.788     Basic
+                 0.658    0.180    0.627      0.658    0.642      0.472    0.841     0.707     Intermediate
+                 0.890    0.037    0.912      0.890    0.901      0.859    0.975     0.961     Advanced
+Weighted Avg.    0.746    0.134    0.749      0.746    0.747      0.613    0.893     0.814     
+
+=== Confusion Matrix ===
+
+   a   b   c   <-- classified as
+ 422 160  16 |   a = Basic
+ 143 321  24 |   b = Intermediate
+  20  31 413 |   c = Advanced
+

@@ -1,0 +1,113 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.SMO -C 1.0 -L 0.001 -P 1.0E-12 -N 0 -V -1 -W 1 -K "weka.classifiers.functions.supportVector.PolyKernel -E 1.0 -C 250007" -calibrator "weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4"
+Relation:     new_data-weka.filters.unsupervised.attribute.Remove-R2-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1
+Instances:    1550
+Attributes:   10
+              Median
+              score
+              ViewCount
+              AnswerCount
+              CommentCount
+              ques_size
+              favoritecount
+              Question_user_repo
+              QATimeGap
+              Majority voting (class)
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+SMO
+
+Kernel used:
+  Linear Kernel: K(x,y) = <x,y>
+
+Classifier for classes: Basic, Intermediate
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+        -0.0589 * (normalized) Median
+ +       0.5332 * (normalized) score
+ +      -2.0587 * (normalized) ViewCount
+ +       0.4072 * (normalized) AnswerCount
+ +       2.3866 * (normalized) CommentCount
+ +       6.6971 * (normalized) ques_size
+ +       0.0193 * (normalized) favoritecount
+ +      -0.8289 * (normalized) Question_user_repo
+ +       0.3691 * (normalized) QATimeGap
+ -       1.1633
+
+Number of kernel evaluations: 22037 (65.152% cached)
+
+Classifier for classes: Basic, Advanced
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+         0.2628 * (normalized) Median
+ +       0.945  * (normalized) score
+ +      -3.2426 * (normalized) ViewCount
+ +      -1.0328 * (normalized) AnswerCount
+ +       0.7324 * (normalized) CommentCount
+ +       7.4139 * (normalized) ques_size
+ +      -0.2297 * (normalized) favoritecount
+ +       1.3854 * (normalized) Question_user_repo
+ +       1.2371 * (normalized) QATimeGap
+ -       1.0764
+
+Number of kernel evaluations: 15229 (70.705% cached)
+
+Classifier for classes: Intermediate, Advanced
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+         1.2665 * (normalized) Median
+ +       0.7305 * (normalized) score
+ +      -2.5918 * (normalized) ViewCount
+ +      -1.5622 * (normalized) AnswerCount
+ +      -0.6133 * (normalized) CommentCount
+ +       4.6783 * (normalized) ques_size
+ +      -0.4468 * (normalized) favoritecount
+ +       2.5475 * (normalized) Question_user_repo
+ +       1.2665 * (normalized) QATimeGap
+ -       0.8145
+
+Number of kernel evaluations: 13294 (56.479% cached)
+
+
+
+Time taken to build model: 0.2 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         713               46      %
+Incorrectly Classified Instances       837               54      %
+Kappa statistic                          0.142 
+Mean absolute error                      0.3976
+Root mean squared error                  0.4988
+Relative absolute error                 90.0239 %
+Root relative squared error            106.1584 %
+Total Number of Instances             1550     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.918    0.731    0.441      0.918    0.596      0.229    0.597     0.439     Basic
+                 0.180    0.093    0.471      0.180    0.261      0.124    0.547     0.345     Intermediate
+                 0.164    0.039    0.644      0.164    0.261      0.216    0.574     0.373     Advanced
+Weighted Avg.    0.460    0.323    0.511      0.460    0.390      0.192    0.574     0.390     
+
+=== Confusion Matrix ===
+
+   a   b   c   <-- classified as
+ 549  40   9 |   a = Basic
+ 367  88  33 |   b = Intermediate
+ 329  59  76 |   c = Advanced
+

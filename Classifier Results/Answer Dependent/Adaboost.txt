@@ -1,0 +1,72 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.meta.AdaBoostM1 -P 100 -S 1 -I 10 -W weka.classifiers.trees.DecisionStump
+Relation:     new_data-weka.filters.unsupervised.attribute.Remove-R2-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1
+Instances:    1550
+Attributes:   10
+              Median
+              score
+              ViewCount
+              AnswerCount
+              CommentCount
+              ques_size
+              favoritecount
+              Question_user_repo
+              QATimeGap
+              Majority voting (class)
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+AdaBoostM1: No boosting possible, one classifier used!
+Decision Stump
+
+Classifications
+
+QATimeGap <= 7.0256540366772375 : Basic
+QATimeGap > 7.0256540366772375 : Advanced
+QATimeGap is missing : Intermediate
+
+Class distributions
+
+QATimeGap <= 7.0256540366772375
+Basic	Intermediate	Advanced	
+0.593974175035868	0.3012912482065997	0.10473457675753228	
+QATimeGap > 7.0256540366772375
+Basic	Intermediate	Advanced	
+0.21621621621621623	0.32432432432432434	0.4594594594594595	
+QATimeGap is missing
+Basic	Intermediate	Advanced	
+0.0	1.0	0.0	
+
+
+
+Time taken to build model: 0.05 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         807               52.0645 %
+Incorrectly Classified Instances       743               47.9355 %
+Kappa statistic                          0.2756
+Mean absolute error                      0.3969
+Root mean squared error                  0.4456
+Relative absolute error                 89.8643 %
+Root relative squared error             94.834  %
+Total Number of Instances             1550     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.692    0.297    0.594      0.692    0.639      0.387    0.681     0.527     Basic
+                 0.004    0.000    1.000      0.004    0.008      0.053    0.495     0.313     Intermediate
+                 0.843    0.424    0.459      0.843    0.595      0.386    0.686     0.419     Advanced
+Weighted Avg.    0.521    0.241    0.682      0.521    0.427      0.281    0.624     0.427     
+
+=== Confusion Matrix ===
+
+   a   b   c   <-- classified as
+ 414   0 184 |   a = Basic
+ 210   2 276 |   b = Intermediate
+  73   0 391 |   c = Advanced
+

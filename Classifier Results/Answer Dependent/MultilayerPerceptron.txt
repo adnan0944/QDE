@@ -1,0 +1,159 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.MultilayerPerceptron -L 0.3 -M 0.2 -N 500 -V 0 -S 0 -E 20 -H a
+Relation:     new_data-weka.filters.unsupervised.attribute.Remove-R2-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1
+Instances:    1550
+Attributes:   10
+              Median
+              score
+              ViewCount
+              AnswerCount
+              CommentCount
+              ques_size
+              favoritecount
+              Question_user_repo
+              QATimeGap
+              Majority voting (class)
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Sigmoid Node 0
+    Inputs    Weights
+    Threshold    -2.1139125647055765
+    Node 3    2.2074868219930086
+    Node 4    3.061795153111806
+    Node 5    -6.766492862992009
+    Node 6    2.5395590803172396
+    Node 7    8.167473135988079
+    Node 8    -3.9728260566365905
+Sigmoid Node 1
+    Inputs    Weights
+    Threshold    -1.4105725543602061
+    Node 3    1.5468832104723396
+    Node 4    -3.0375620899514835
+    Node 5    -3.5484584402272183
+    Node 6    0.8518030424687876
+    Node 7    -7.699146042143174
+    Node 8    6.348656905353724
+Sigmoid Node 2
+    Inputs    Weights
+    Threshold    1.2312945874513288
+    Node 3    -4.151938575955376
+    Node 4    -1.7176358896201933
+    Node 5    7.420433477700045
+    Node 6    -3.357307312905871
+    Node 7    -6.037017933040808
+    Node 8    -5.601637831187285
+Sigmoid Node 3
+    Inputs    Weights
+    Threshold    1.4955819810125734
+    Attrib Median    5.0971230868716475
+    Attrib score    -27.346410529114205
+    Attrib ViewCount    23.70479543128988
+    Attrib AnswerCount    -4.995552015399162
+    Attrib CommentCount    9.01403615428689
+    Attrib ques_size    -1.0806717127206769
+    Attrib favoritecount    1.2970046639806692
+    Attrib Question_user_repo    -2.099083621435572
+    Attrib QATimeGap    1.58549042636918
+Sigmoid Node 4
+    Inputs    Weights
+    Threshold    -4.093532721898415
+    Attrib Median    2.3333372816838853
+    Attrib score    -4.655695788857735
+    Attrib ViewCount    24.01905286630599
+    Attrib AnswerCount    -7.514512292239517
+    Attrib CommentCount    1.3870170043515626
+    Attrib ques_size    -27.894190479352527
+    Attrib favoritecount    0.6317812340120414
+    Attrib Question_user_repo    8.310085417224032
+    Attrib QATimeGap    -0.06046889332512609
+Sigmoid Node 5
+    Inputs    Weights
+    Threshold    0.8825461491537314
+    Attrib Median    -5.972382408014185
+    Attrib score    7.101367979374728
+    Attrib ViewCount    -7.210445541631224
+    Attrib AnswerCount    -0.9879787827649233
+    Attrib CommentCount    2.0157694806417426
+    Attrib ques_size    3.6791044374278057
+    Attrib favoritecount    -1.6808376969843222
+    Attrib Question_user_repo    5.917673352398237
+    Attrib QATimeGap    4.9779608145627545
+Sigmoid Node 6
+    Inputs    Weights
+    Threshold    -11.02077932473062
+    Attrib Median    -9.696863730517283
+    Attrib score    -17.555726896614434
+    Attrib ViewCount    43.68385271562518
+    Attrib AnswerCount    5.359503015471309
+    Attrib CommentCount    -7.357318728053474
+    Attrib ques_size    -4.284610589958189
+    Attrib favoritecount    1.1562734967864026
+    Attrib Question_user_repo    -0.9329438490256421
+    Attrib QATimeGap    -23.750230272573926
+Sigmoid Node 7
+    Inputs    Weights
+    Threshold    -4.131035998345925
+    Attrib Median    2.2391236954989298
+    Attrib score    -4.102083955674333
+    Attrib ViewCount    19.58052714536544
+    Attrib AnswerCount    -2.363158789237489
+    Attrib CommentCount    -3.796379540187289
+    Attrib ques_size    -8.357468643715613
+    Attrib favoritecount    1.6543126922357796
+    Attrib Question_user_repo    0.5868873692879528
+    Attrib QATimeGap    -5.685645688528522
+Sigmoid Node 8
+    Inputs    Weights
+    Threshold    7.752882334177462
+    Attrib Median    6.681977925613791
+    Attrib score    0.6766589887601435
+    Attrib ViewCount    2.8511097934671352
+    Attrib AnswerCount    16.65072960873185
+    Attrib CommentCount    2.217943962008349
+    Attrib ques_size    -3.942145018849596
+    Attrib favoritecount    4.1020456240100795
+    Attrib Question_user_repo    -4.7336324753108725
+    Attrib QATimeGap    -1.0439068118436114
+Class Basic
+    Input
+    Node 0
+Class Intermediate
+    Input
+    Node 1
+Class Advanced
+    Input
+    Node 2
+
+
+Time taken to build model: 2.63 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         810               52.2581 %
+Incorrectly Classified Instances       740               47.7419 %
+Kappa statistic                          0.2765
+Mean absolute error                      0.3675
+Root mean squared error                  0.439 
+Relative absolute error                 83.2274 %
+Root relative squared error             93.4291 %
+Total Number of Instances             1550     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.635    0.307    0.565      0.635    0.598      0.323    0.746     0.669     Basic
+                 0.268    0.185    0.399      0.268    0.321      0.094    0.602     0.381     Intermediate
+                 0.644    0.231    0.544      0.644    0.590      0.396    0.788     0.589     Advanced
+Weighted Avg.    0.523    0.246    0.507      0.523    0.509      0.273    0.713     0.555     
+
+=== Confusion Matrix ===
+
+   a   b   c   <-- classified as
+ 380 115 103 |   a = Basic
+ 209 131 148 |   b = Intermediate
+  83  82 299 |   c = Advanced
+

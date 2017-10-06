@@ -1,0 +1,352 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     new_data-weka.filters.unsupervised.attribute.Remove-R2-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1-weka.filters.supervised.instance.SMOTE-C0-K5-P100.0-S1
+Instances:    1550
+Attributes:   10
+              Median
+              score
+              ViewCount
+              AnswerCount
+              CommentCount
+              ques_size
+              favoritecount
+              Question_user_repo
+              QATimeGap
+              Majority voting (class)
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+QATimeGap <= 7
+|   ViewCount <= 59296
+|   |   favoritecount <= 33
+|   |   |   QATimeGap <= 3
+|   |   |   |   CommentCount <= 0.025121
+|   |   |   |   |   favoritecount <= 2.499407: Basic (31.98/2.1)
+|   |   |   |   |   favoritecount > 2.499407
+|   |   |   |   |   |   score <= 25.437815
+|   |   |   |   |   |   |   ques_size <= 219.340964: Basic (7.81/0.01)
+|   |   |   |   |   |   |   ques_size > 219.340964
+|   |   |   |   |   |   |   |   Question_user_repo <= 3405
+|   |   |   |   |   |   |   |   |   favoritecount <= 6.491337: Basic (10.45/1.77)
+|   |   |   |   |   |   |   |   |   favoritecount > 6.491337: Intermediate (5.97/1.53)
+|   |   |   |   |   |   |   |   Question_user_repo > 3405
+|   |   |   |   |   |   |   |   |   ViewCount <= 5146
+|   |   |   |   |   |   |   |   |   |   Question_user_repo <= 6172.613822: Advanced (5.61/0.0)
+|   |   |   |   |   |   |   |   |   |   Question_user_repo > 6172.613822: Basic (3.6/0.0)
+|   |   |   |   |   |   |   |   |   ViewCount > 5146
+|   |   |   |   |   |   |   |   |   |   favoritecount <= 5.474817
+|   |   |   |   |   |   |   |   |   |   |   QATimeGap <= 2.416657
+|   |   |   |   |   |   |   |   |   |   |   |   Question_user_repo <= 4962: Basic (2.0/0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Question_user_repo > 4962: Intermediate (3.0)
+|   |   |   |   |   |   |   |   |   |   |   QATimeGap > 2.416657: Intermediate (2.0)
+|   |   |   |   |   |   |   |   |   |   favoritecount > 5.474817: Basic (3.0/1.0)
+|   |   |   |   |   |   score > 25.437815: Basic (11.04/0.04)
+|   |   |   |   CommentCount > 0.025121
+|   |   |   |   |   CommentCount <= 0.976685: Intermediate (9.01)
+|   |   |   |   |   CommentCount > 0.976685
+|   |   |   |   |   |   favoritecount <= 5.474817
+|   |   |   |   |   |   |   ques_size <= 918: Basic (84.66/13.57)
+|   |   |   |   |   |   |   ques_size > 918
+|   |   |   |   |   |   |   |   QATimeGap <= 2.859932: Intermediate (16.68/4.73)
+|   |   |   |   |   |   |   |   QATimeGap > 2.859932
+|   |   |   |   |   |   |   |   |   AnswerCount <= 5.46061
+|   |   |   |   |   |   |   |   |   |   AnswerCount <= 4.497811: Basic (12.21/2.75)
+|   |   |   |   |   |   |   |   |   |   AnswerCount > 4.497811: Intermediate (2.73)
+|   |   |   |   |   |   |   |   |   AnswerCount > 5.46061: Basic (3.0/0.0)
+|   |   |   |   |   |   favoritecount > 5.474817
+|   |   |   |   |   |   |   AnswerCount <= 9.14039: Basic (28.4/10.82)
+|   |   |   |   |   |   |   AnswerCount > 9.14039: Intermediate (8.01/1.0)
+|   |   |   QATimeGap > 3
+|   |   |   |   QATimeGap <= 3.995319
+|   |   |   |   |   ques_size <= 359: Advanced (9.01/1.01)
+|   |   |   |   |   ques_size > 359
+|   |   |   |   |   |   Median <= 10.742381
+|   |   |   |   |   |   |   ques_size <= 754: Advanced (3.01/0.01)
+|   |   |   |   |   |   |   ques_size > 754: Intermediate (3.01)
+|   |   |   |   |   |   Median > 10.742381: Intermediate (9.83)
+|   |   |   |   QATimeGap > 3.995319
+|   |   |   |   |   favoritecount <= 20.406215
+|   |   |   |   |   |   QATimeGap <= 4: Basic (71.95/19.75)
+|   |   |   |   |   |   QATimeGap > 4
+|   |   |   |   |   |   |   QATimeGap <= 4.993187
+|   |   |   |   |   |   |   |   Question_user_repo <= 3625
+|   |   |   |   |   |   |   |   |   Median <= 19.072791: Advanced (12.01/1.01)
+|   |   |   |   |   |   |   |   |   Median > 19.072791: Intermediate (3.01)
+|   |   |   |   |   |   |   |   Question_user_repo > 3625: Intermediate (8.9)
+|   |   |   |   |   |   |   QATimeGap > 4.993187
+|   |   |   |   |   |   |   |   ViewCount <= 7158
+|   |   |   |   |   |   |   |   |   Question_user_repo <= 1020
+|   |   |   |   |   |   |   |   |   |   ques_size <= 1792.343794
+|   |   |   |   |   |   |   |   |   |   |   AnswerCount <= 4.741008
+|   |   |   |   |   |   |   |   |   |   |   |   favoritecount <= 2.499407
+|   |   |   |   |   |   |   |   |   |   |   |   |   Median <= 24: Intermediate (12.72/3.35)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Median > 24: Basic (4.37/0.01)
+|   |   |   |   |   |   |   |   |   |   |   |   favoritecount > 2.499407: Basic (5.26/0.42)
+|   |   |   |   |   |   |   |   |   |   |   AnswerCount > 4.741008: Basic (14.67/0.02)
+|   |   |   |   |   |   |   |   |   |   ques_size > 1792.343794
+|   |   |   |   |   |   |   |   |   |   |   Median <= 15.5: Basic (3.0/0.0)
+|   |   |   |   |   |   |   |   |   |   |   Median > 15.5: Advanced (3.0/0.0)
+|   |   |   |   |   |   |   |   |   Question_user_repo > 1020
+|   |   |   |   |   |   |   |   |   |   AnswerCount <= 3.024613
+|   |   |   |   |   |   |   |   |   |   |   score <= 10.684337
+|   |   |   |   |   |   |   |   |   |   |   |   ViewCount <= 433: Intermediate (2.89/0.89)
+|   |   |   |   |   |   |   |   |   |   |   |   ViewCount > 433
+|   |   |   |   |   |   |   |   |   |   |   |   |   favoritecount <= 3.459603: Basic (14.01/3.76)
+|   |   |   |   |   |   |   |   |   |   |   |   |   favoritecount > 3.459603: Intermediate (2.55/0.41)
+|   |   |   |   |   |   |   |   |   |   |   score > 10.684337: Intermediate (7.02)
+|   |   |   |   |   |   |   |   |   |   AnswerCount > 3.024613
+|   |   |   |   |   |   |   |   |   |   |   AnswerCount <= 3.371846: Advanced (3.0/0.0)
+|   |   |   |   |   |   |   |   |   |   |   AnswerCount > 3.371846
+|   |   |   |   |   |   |   |   |   |   |   |   Median <= 12.195415
+|   |   |   |   |   |   |   |   |   |   |   |   |   Question_user_repo <= 6561: Intermediate (5.9)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Question_user_repo > 6561: Basic (4.9/1.01)
+|   |   |   |   |   |   |   |   |   |   |   |   Median > 12.195415
+|   |   |   |   |   |   |   |   |   |   |   |   |   AnswerCount <= 5.756789
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   CommentCount <= 2.871851: Basic (6.89/1.01)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   CommentCount > 2.871851: Advanced (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   AnswerCount > 5.756789
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   favoritecount <= 3.49114
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ques_size <= 1601.235021: Advanced (3.57/0.57)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ques_size > 1601.235021: Intermediate (4.57/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   favoritecount > 3.49114
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   score <= 13.90226: Basic (2.65/0.33)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   score > 13.90226: Intermediate (2.0)
+|   |   |   |   |   |   |   |   ViewCount > 7158
+|   |   |   |   |   |   |   |   |   AnswerCount <= 3.080662
+|   |   |   |   |   |   |   |   |   |   QATimeGap <= 5.997472
+|   |   |   |   |   |   |   |   |   |   |   ques_size <= 895.56475: Basic (6.01/0.01)
+|   |   |   |   |   |   |   |   |   |   |   ques_size > 895.56475: Intermediate (5.89/1.89)
+|   |   |   |   |   |   |   |   |   |   QATimeGap > 5.997472: Basic (10.9/0.01)
+|   |   |   |   |   |   |   |   |   AnswerCount > 3.080662
+|   |   |   |   |   |   |   |   |   |   ViewCount <= 10522
+|   |   |   |   |   |   |   |   |   |   |   favoritecount <= 3.49114: Basic (7.4/0.01)
+|   |   |   |   |   |   |   |   |   |   |   favoritecount > 3.49114
+|   |   |   |   |   |   |   |   |   |   |   |   score <= 13: Intermediate (4.5/0.5)
+|   |   |   |   |   |   |   |   |   |   |   |   score > 13: Basic (5.01/0.01)
+|   |   |   |   |   |   |   |   |   |   ViewCount > 10522
+|   |   |   |   |   |   |   |   |   |   |   CommentCount <= 0.034169
+|   |   |   |   |   |   |   |   |   |   |   |   Question_user_repo <= 348: Intermediate (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Question_user_repo > 348: Basic (7.01/2.01)
+|   |   |   |   |   |   |   |   |   |   |   CommentCount > 0.034169: Intermediate (36.59/10.77)
+|   |   |   |   |   favoritecount > 20.406215
+|   |   |   |   |   |   ViewCount <= 16612
+|   |   |   |   |   |   |   score <= 17.042874: Basic (2.15/0.63)
+|   |   |   |   |   |   |   score > 17.042874: Advanced (10.08/1.08)
+|   |   |   |   |   |   ViewCount > 16612: Basic (10.36/1.15)
+|   |   favoritecount > 33
+|   |   |   score <= 13.221497: Basic (3.48/0.93)
+|   |   |   score > 13.221497
+|   |   |   |   Question_user_repo <= 2299.031599: Advanced (8.14/0.14)
+|   |   |   |   Question_user_repo > 2299.031599
+|   |   |   |   |   ViewCount <= 22140: Advanced (3.28/0.28)
+|   |   |   |   |   ViewCount > 22140: Intermediate (13.15/1.0)
+|   ViewCount > 59296
+|   |   favoritecount <= 66: Basic (66.9/3.09)
+|   |   favoritecount > 66
+|   |   |   QATimeGap <= 5.032756
+|   |   |   |   ques_size <= 739: Basic (9.2/0.01)
+|   |   |   |   ques_size > 739: Intermediate (3.0)
+|   |   |   QATimeGap > 5.032756: Intermediate (3.0)
+QATimeGap > 7
+|   ViewCount <= 8455
+|   |   ViewCount <= 607
+|   |   |   AnswerCount <= 1.081536
+|   |   |   |   Question_user_repo <= 660
+|   |   |   |   |   CommentCount <= 4.481893: Basic (7.01/0.01)
+|   |   |   |   |   CommentCount > 4.481893
+|   |   |   |   |   |   Median <= 22.5: Basic (2.0/0.0)
+|   |   |   |   |   |   Median > 22.5: Intermediate (2.0)
+|   |   |   |   Question_user_repo > 660: Intermediate (2.0/1.0)
+|   |   |   AnswerCount > 1.081536: Intermediate (68.09/21.0)
+|   |   ViewCount > 607
+|   |   |   score <= 15.161079
+|   |   |   |   CommentCount <= 6.279858
+|   |   |   |   |   QATimeGap <= 968
+|   |   |   |   |   |   QATimeGap <= 105
+|   |   |   |   |   |   |   favoritecount <= 1.002439
+|   |   |   |   |   |   |   |   Question_user_repo <= 55831
+|   |   |   |   |   |   |   |   |   ques_size <= 590.227835
+|   |   |   |   |   |   |   |   |   |   Question_user_repo <= 593: Advanced (3.35/0.35)
+|   |   |   |   |   |   |   |   |   |   Question_user_repo > 593: Basic (10.53/1.18)
+|   |   |   |   |   |   |   |   |   ques_size > 590.227835
+|   |   |   |   |   |   |   |   |   |   favoritecount <= 0.472055: Basic (2.17/1.08)
+|   |   |   |   |   |   |   |   |   |   favoritecount > 0.472055
+|   |   |   |   |   |   |   |   |   |   |   CommentCount <= 1.476646: Basic (8.79/2.17)
+|   |   |   |   |   |   |   |   |   |   |   CommentCount > 1.476646
+|   |   |   |   |   |   |   |   |   |   |   |   AnswerCount <= 5.908345: Intermediate (10.95/2.31)
+|   |   |   |   |   |   |   |   |   |   |   |   AnswerCount > 5.908345: Basic (2.0/0.0)
+|   |   |   |   |   |   |   |   Question_user_repo > 55831: Advanced (5.18/0.18)
+|   |   |   |   |   |   |   favoritecount > 1.002439
+|   |   |   |   |   |   |   |   ViewCount <= 2602
+|   |   |   |   |   |   |   |   |   ViewCount <= 1233.49958
+|   |   |   |   |   |   |   |   |   |   CommentCount <= 5.036545
+|   |   |   |   |   |   |   |   |   |   |   Question_user_repo <= 10728.172175: Intermediate (12.32/1.66)
+|   |   |   |   |   |   |   |   |   |   |   Question_user_repo > 10728.172175: Basic (2.66/0.0)
+|   |   |   |   |   |   |   |   |   |   CommentCount > 5.036545: Advanced (8.84/1.84)
+|   |   |   |   |   |   |   |   |   ViewCount > 1233.49958
+|   |   |   |   |   |   |   |   |   |   QATimeGap <= 14.97435
+|   |   |   |   |   |   |   |   |   |   |   Question_user_repo <= 890.521376: Advanced (47.05/0.05)
+|   |   |   |   |   |   |   |   |   |   |   Question_user_repo > 890.521376
+|   |   |   |   |   |   |   |   |   |   |   |   Question_user_repo <= 12826
+|   |   |   |   |   |   |   |   |   |   |   |   |   CommentCount <= 4: Intermediate (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   CommentCount > 4: Advanced (4.0/0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   Question_user_repo > 12826: Advanced (14.01/0.01)
+|   |   |   |   |   |   |   |   |   |   QATimeGap > 14.97435
+|   |   |   |   |   |   |   |   |   |   |   CommentCount <= 0.976685: Intermediate (7.84)
+|   |   |   |   |   |   |   |   |   |   |   CommentCount > 0.976685
+|   |   |   |   |   |   |   |   |   |   |   |   AnswerCount <= 2.125802: Basic (3.83/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   AnswerCount > 2.125802: Advanced (10.84/1.84)
+|   |   |   |   |   |   |   |   ViewCount > 2602
+|   |   |   |   |   |   |   |   |   QATimeGap <= 7.833999: Advanced (8.01/0.01)
+|   |   |   |   |   |   |   |   |   QATimeGap > 7.833999
+|   |   |   |   |   |   |   |   |   |   ViewCount <= 3808
+|   |   |   |   |   |   |   |   |   |   |   score <= 6.803023
+|   |   |   |   |   |   |   |   |   |   |   |   score <= 6.07683: Basic (2.85/0.02)
+|   |   |   |   |   |   |   |   |   |   |   |   score > 6.07683: Advanced (7.0)
+|   |   |   |   |   |   |   |   |   |   |   score > 6.803023: Basic (8.83)
+|   |   |   |   |   |   |   |   |   |   ViewCount > 3808
+|   |   |   |   |   |   |   |   |   |   |   Median <= 376835
+|   |   |   |   |   |   |   |   |   |   |   |   favoritecount <= 2.046153
+|   |   |   |   |   |   |   |   |   |   |   |   |   favoritecount <= 1.966507
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   favoritecount <= 1.44034: Intermediate (3.19/0.1)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   favoritecount > 1.44034: Advanced (2.13/0.13)
+|   |   |   |   |   |   |   |   |   |   |   |   |   favoritecount > 1.966507
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   ViewCount <= 4904.229098: Intermediate (2.38/0.19)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   ViewCount > 4904.229098: Basic (10.39/0.2)
+|   |   |   |   |   |   |   |   |   |   |   |   favoritecount > 2.046153
+|   |   |   |   |   |   |   |   |   |   |   |   |   Question_user_repo <= 6040.580048
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   CommentCount <= 1.953164
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ques_size <= 1797
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AnswerCount <= 4.741008: Advanced (10.01/1.01)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AnswerCount > 4.741008: Intermediate (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ques_size > 1797
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   score <= 6.678943: Advanced (2.01/0.01)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   score > 6.678943: Intermediate (8.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   CommentCount > 1.953164
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AnswerCount <= 4.497811: Basic (3.12/0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   AnswerCount > 4.497811: Advanced (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Question_user_repo > 6040.580048: Intermediate (9.12)
+|   |   |   |   |   |   |   |   |   |   |   Median > 376835: Advanced (8.83/0.83)
+|   |   |   |   |   |   QATimeGap > 105
+|   |   |   |   |   |   |   Median <= 785
+|   |   |   |   |   |   |   |   Question_user_repo <= 2248
+|   |   |   |   |   |   |   |   |   score <= 7: Intermediate (3.01)
+|   |   |   |   |   |   |   |   |   score > 7: Advanced (5.0)
+|   |   |   |   |   |   |   |   Question_user_repo > 2248: Intermediate (20.03)
+|   |   |   |   |   |   |   Median > 785
+|   |   |   |   |   |   |   |   CommentCount <= 0.103318: Intermediate (3.0)
+|   |   |   |   |   |   |   |   CommentCount > 0.103318
+|   |   |   |   |   |   |   |   |   favoritecount <= 1.572732: Basic (2.29/0.29)
+|   |   |   |   |   |   |   |   |   favoritecount > 1.572732: Advanced (5.71)
+|   |   |   |   |   QATimeGap > 968
+|   |   |   |   |   |   AnswerCount <= 1.123949: Intermediate (3.0)
+|   |   |   |   |   |   AnswerCount > 1.123949
+|   |   |   |   |   |   |   Median <= 679558.321344: Advanced (44.05/1.05)
+|   |   |   |   |   |   |   Median > 679558.321344: Intermediate (2.0)
+|   |   |   |   CommentCount > 6.279858
+|   |   |   |   |   score <= 13.309886
+|   |   |   |   |   |   Question_user_repo <= 27451: Intermediate (25.03/3.0)
+|   |   |   |   |   |   Question_user_repo > 27451: Basic (2.0/0.0)
+|   |   |   |   |   score > 13.309886: Advanced (3.0)
+|   |   |   score > 15.161079
+|   |   |   |   Median <= 384
+|   |   |   |   |   score <= 34.443941
+|   |   |   |   |   |   favoritecount <= 6.686712
+|   |   |   |   |   |   |   favoritecount <= 3.700661
+|   |   |   |   |   |   |   |   ques_size <= 689.005596: Advanced (7.05/1.05)
+|   |   |   |   |   |   |   |   ques_size > 689.005596: Intermediate (3.02)
+|   |   |   |   |   |   |   favoritecount > 3.700661
+|   |   |   |   |   |   |   |   Median <= 19: Basic (4.14/1.14)
+|   |   |   |   |   |   |   |   Median > 19: Advanced (17.0/1.0)
+|   |   |   |   |   |   favoritecount > 6.686712
+|   |   |   |   |   |   |   AnswerCount <= 3.697132: Intermediate (10.07/1.0)
+|   |   |   |   |   |   |   AnswerCount > 3.697132
+|   |   |   |   |   |   |   |   favoritecount <= 9.240789: Advanced (6.04/1.04)
+|   |   |   |   |   |   |   |   favoritecount > 9.240789: Intermediate (9.06/1.0)
+|   |   |   |   |   score > 34.443941: Advanced (43.0/2.0)
+|   |   |   |   Median > 384: Advanced (99.0/2.0)
+|   ViewCount > 8455
+|   |   QATimeGap <= 3865.302633
+|   |   |   ViewCount <= 36829.260315
+|   |   |   |   AnswerCount <= 2.023651
+|   |   |   |   |   ques_size <= 1334.529711: Basic (14.02/0.02)
+|   |   |   |   |   ques_size > 1334.529711
+|   |   |   |   |   |   ViewCount <= 15889.712911: Intermediate (4.01/1.0)
+|   |   |   |   |   |   ViewCount > 15889.712911: Basic (3.0/0.0)
+|   |   |   |   AnswerCount > 2.023651
+|   |   |   |   |   favoritecount <= 12.297821
+|   |   |   |   |   |   ques_size <= 4097.790838
+|   |   |   |   |   |   |   CommentCount <= 5.667775
+|   |   |   |   |   |   |   |   CommentCount <= 1.125027
+|   |   |   |   |   |   |   |   |   Median <= 14.657175: Intermediate (4.02)
+|   |   |   |   |   |   |   |   |   Median > 14.657175
+|   |   |   |   |   |   |   |   |   |   ques_size <= 682
+|   |   |   |   |   |   |   |   |   |   |   QATimeGap <= 13.941451: Basic (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   QATimeGap > 13.941451: Intermediate (5.23)
+|   |   |   |   |   |   |   |   |   |   ques_size > 682: Basic (14.24/0.62)
+|   |   |   |   |   |   |   |   CommentCount > 1.125027
+|   |   |   |   |   |   |   |   |   ques_size <= 232: Basic (3.0/0.0)
+|   |   |   |   |   |   |   |   |   ques_size > 232: Intermediate (40.89/9.0)
+|   |   |   |   |   |   |   CommentCount > 5.667775: Basic (4.01/0.01)
+|   |   |   |   |   |   ques_size > 4097.790838: Advanced (2.62/0.62)
+|   |   |   |   |   favoritecount > 12.297821
+|   |   |   |   |   |   Question_user_repo <= 1075: Advanced (11.4/1.4)
+|   |   |   |   |   |   Question_user_repo > 1075
+|   |   |   |   |   |   |   Median <= 264076.5
+|   |   |   |   |   |   |   |   favoritecount <= 18
+|   |   |   |   |   |   |   |   |   favoritecount <= 15.995093: Intermediate (10.99)
+|   |   |   |   |   |   |   |   |   favoritecount > 15.995093
+|   |   |   |   |   |   |   |   |   |   QATimeGap <= 13.484765: Basic (2.07/0.07)
+|   |   |   |   |   |   |   |   |   |   QATimeGap > 13.484765: Intermediate (2.33)
+|   |   |   |   |   |   |   |   favoritecount > 18
+|   |   |   |   |   |   |   |   |   Median <= 190.194258
+|   |   |   |   |   |   |   |   |   |   Median <= 127.326755: Intermediate (3.34/1.0)
+|   |   |   |   |   |   |   |   |   |   Median > 127.326755: Advanced (3.0)
+|   |   |   |   |   |   |   |   |   Median > 190.194258: Intermediate (4.64)
+|   |   |   |   |   |   |   Median > 264076.5
+|   |   |   |   |   |   |   |   Question_user_repo <= 7660: Intermediate (7.39/1.39)
+|   |   |   |   |   |   |   |   Question_user_repo > 7660: Basic (4.0)
+|   |   |   ViewCount > 36829.260315: Basic (35.05/8.05)
+|   |   QATimeGap > 3865.302633
+|   |   |   favoritecount <= 5.176808: Advanced (17.02/0.02)
+|   |   |   favoritecount > 5.176808: Intermediate (5.01/1.0)
+
+Number of Leaves  : 	148
+
+Size of the tree : 	295
+
+
+Time taken to build model: 0.28 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        1003               64.7097 %
+Incorrectly Classified Instances       547               35.2903 %
+Kappa statistic                          0.4667
+Mean absolute error                      0.2555
+Root mean squared error                  0.4337
+Relative absolute error                 57.8512 %
+Root relative squared error             92.2951 %
+Total Number of Instances             1550     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.651    0.237    0.633      0.651    0.641      0.411    0.757     0.590     Basic
+                 0.498    0.207    0.525      0.498    0.511      0.295    0.683     0.487     Intermediate
+                 0.800    0.093    0.786      0.800    0.793      0.703    0.876     0.751     Advanced
+Weighted Avg.    0.647    0.185    0.645      0.647    0.646      0.462    0.769     0.606     
+
+=== Confusion Matrix ===
+
+   a   b   c   <-- classified as
+ 389 166  43 |   a = Basic
+ 187 243  58 |   b = Intermediate
+  39  54 371 |   c = Advanced
+
